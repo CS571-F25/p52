@@ -2,6 +2,7 @@ import {useState} from "react";
 import {Card, Button} from "react-bootstrap";
 import lessons from "./dailyLessons.json"
 import Source from "./Source.jsx";
+import footerImage from "../assets/KPDH-Footer.png";
 
 export default function Home (props) {
 
@@ -43,5 +44,6 @@ export default function Home (props) {
             }
 
         </Card>
+        <img src={footerImage} alt="Footer Image with Zoey, Rumi, and Mira gazing upwards" style={{ width: "60%", height: "auto" }} />
     </div>
 }
