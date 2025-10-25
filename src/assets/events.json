@@ -1,0 +1,166 @@
+{
+    "events": [
+        {
+            "upcoming": true,
+            "name": "\"Golden\" Dance Lesson - Rumi",
+            "description": "Learn Rumi's choreography for the song \"Golden\".",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["Dance"]
+        },
+        {
+            "upcoming": true,
+            "name": "\"Golden\" Dance Lesson - Zoey",
+            "description": "Learn Zoey's choreography for the song \"Golden\".",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["Dance"]
+        },
+        {
+            "upcoming": true,
+            "name": "\"Golden\" Dance Lesson - Mira",
+            "description": "Learn Mira's choreography for the song \"Golden\".",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["Dance"]
+        },
+        {
+            "upcoming": true,
+            "name": "\"Soda Pop\" Dance Lesson",
+            "description": "Learn choreography for the song \"Soda Pop\".",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["Dance"]
+        },
+        {
+            "upcoming": true,
+            "name": "\"Your Idol\" Dance Lesson",
+            "description": "Learn choreography for the song \"Your Idol\".",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["Dance"]
+        },
+        {
+            "upcoming": true,
+            "name": "Flash Mob Event",
+            "description": "Perform \"Golden\" in public.",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["Dance"]
+        },
+        {
+            "upcoming": true,
+            "name": "Karaoke",
+            "description": "Sing songs from <em>KPop Demon Hunters</em>.",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["Singing"]
+        },
+        {
+            "upcoming": true,
+            "name": "Korean Lyrics",
+            "description": "Learn how to sing the Korean lyrics in KPDH songs.",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["Singing"]
+        },
+        {
+            "upcoming": true,
+            "name": "Maedeup Bracelet Craft",
+            "description": "Re-create the bracelet Rumi gave to Jinu.",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["DIY"]
+        },
+        {
+            "upcoming": true,
+            "name": "Huntrix Weapons Craft",
+            "description": "Gear yourself up to fight some demons with these demon hunter weapons.",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["DIY"]
+        },
+        {
+            "upcoming": true,
+            "name": "Korean Cuisine",
+            "description": "Learn about and create Korean cuisine.",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["Culture", "Food"]
+        },
+        {
+            "upcoming": true,
+            "name": "Cookie Decorating",
+            "description": "Create your own gingerbread demon hunter.",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["Food"]
+        },
+        {
+            "upcoming": true,
+            "name": "Korean Culture",
+            "description": "Learn about Korean culture from faculty in the Asian Languages and Cultures department.",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["Culture","Speakers"]
+        },
+        {
+            "upcoming": true,
+            "name": "KPDH Speakers",
+            "description": "Learn about the making of the movie from creators.",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["Speakers", "Film Creation"]
+        },
+        {
+            "upcoming": true,
+            "name": "Animation Analysis",
+            "description": "Join us in watching a professional animator break down the animation techniques used in KPDH",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["Watch Party", "Film Creation"]
+        },
+        {
+            "upcoming": true,
+            "name": "Movie Night - Group 1",
+            "description": "Join us for a viewing of the movie <em>KPop Demon Hunters</em>. Commentary is allowed.",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["Watch Party"]
+        },
+                {
+            "upcoming": true,
+            "name": "Movie Night - Group 2",
+            "description": "Join us for a silent viewing of the movie <em>KPop Demon Hunters</em>.",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["Watch Party"]
+        },
+        {
+            "upcoming": true,
+            "name": "KPDH Short",
+            "description": "Join us for a viewing of the short inspired by the movie <em>KPop Demon Hunters</em>",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["Watch Party"]
+        }
+    ]
+}
