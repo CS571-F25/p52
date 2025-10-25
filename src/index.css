@@ -28,6 +28,13 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  /* background control inspired by https://www.w3schools.com/cssref/pr_background-attachment.php*/
+  background-color:#535bf2;
+  background-image: url("./assets/background.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 h1 {
