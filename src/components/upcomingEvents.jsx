@@ -1,7 +1,7 @@
 import events from "../assets/events.json"
 import EventCard from "./EventCard";
 import { Container, Row, Col, Pagination } from "react-bootstrap";
-import { useState } from "react"
+import { useState } from "react";
 
 export default function UpcomingEvents(props) {
     // get upcoming events
@@ -97,11 +97,12 @@ export default function UpcomingEvents(props) {
             </Pagination>
         </div>
         <br/>
-        <Container>
+        <Container style={{width: "100vw", height: "100vh"}}> {/* Keep content positions consistent */}
             <Row>
                 {
                     keptEvents.map((e) => {
-                        return <Col key={e.name} xs={12} sm={12} md={6} lg={4} xl={3} style={{ marginBottom: "16px"}}>
+                        console.log(Container.width);
+                        return <Col key={e.name} xs={12} sm={12} md={6} lg={4} xl={3} style={{ marginBottom: "16px" }}>
                             <EventCard {...e}></EventCard>
                         </Col>
                     })
