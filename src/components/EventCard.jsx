@@ -5,15 +5,23 @@ export default function EventCard(props) {
     const renderDescription = splitEmTags(props.description);
 
     return <Card style={{width: "fit-content"}}>
-        {
-            props.categories.map((c) => <p key={c}>{c}</p>)
+        { props.upcoming &&
+            <>
+                {
+                    props.categories.map((c) => <p key={c}>{c}</p>)
+                }
+                <h2>{renderName}</h2>
+                <p>{renderDescription}</p>
+                <br/>
+                <p><strong>Date: </strong>{props.date}</p>
+                <p><strong>Time: </strong>{props.time}</p>
+                <p><strong>Location: </strong>{props.location}</p>
+            </>
         }
-        <h2>{renderName}</h2>
-        <p>{renderDescription}</p>
-        <br/>
-        <p><strong>Date: </strong>{props.date}</p>
-        <p><strong>Time: </strong>{props.time}</p>
-        <p><strong>Location: </strong>{props.location}</p>
+        { !props.upcoming &&
+            <>
+            </>
+        }
     </Card>;
 }
 

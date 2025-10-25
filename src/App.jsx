@@ -3,6 +3,7 @@ import './App.css'
 import Home from './components/Home'
 import AboutMe from './components/AboutMe'
 import UpcomingEvents from './components/UpcomingEvents'
+import PastEvents from './components/PastEvents'
 
 function App() {
   return <HashRouter>
@@ -10,6 +11,7 @@ function App() {
       <Route path="/" element={<Home/>}></Route>
       <Route path="/about" element={<AboutMe/>}></Route>
       <Route path="/upcoming-events" element={<UpcomingEvents/>}></Route>
+      <Route path="/past-events" element={<PastEvents/>}></Route>
     </Routes>
   </HashRouter>
 }
