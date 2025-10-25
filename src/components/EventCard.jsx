@@ -1,10 +1,12 @@
+import {Card} from "react-bootstrap"
+
 // events have a name, description, date, time, location, and category
-export default function Event(props) {
+export default function EventCard(props) {
     return <Card>
         {
-            props.categories.map((c) => <p>{c}</p>)
+            props.categories.map((c) => <p key={c}>{c}</p>)
         }
-        <h1>{props.name}</h1>
+        <h2>{props.name}</h2>
         <p>{props.description}</p>
         <br/>
         <p><strong>Date: </strong>{props.date}</p>
