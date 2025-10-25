@@ -1,10 +1,12 @@
 import events from "../assets/events.json"
 import EventCard from "./EventCard";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Pagination } from "react-bootstrap";
+import { useState } from "react"
 
 export default function UpcomingEvents(props) {
     // get upcoming events
     const eventList = events.events.filter((e) => e.upcoming );
+    const [type, setType] = useState("All");
 
     // Sort events by date and time
     const sortedEvents = eventList.sort((a, b) => {
@@ -50,14 +52,55 @@ export default function UpcomingEvents(props) {
         }
     });
 
+    // get all possible event categories
+    const uniqueCategories = new Set(); // set means no duplicate categories
+
+    uniqueCategories.add("All");
+
+    // Iterate through each event and add categories to the Set
+    eventList.forEach(event => {
+        event.categories.forEach(category => {
+            uniqueCategories.add(category);
+        });
+    });
+
+    // Convert the Set to an array so can use map
+    const categoryList = Array.from(uniqueCategories);
+
+    // Update events based on category
+    let keptEvents;
+
+    if (type === "All") {
+        keptEvents = sortedEvents;
+    }
+    else {
+        keptEvents = sortedEvents.filter((e) => {
+            return e.categories.some(category => category === type);
+        })
+    }
 
     return <div>
         <h1>Upcoming Events</h1>
         <br/>
+        <div className="d-flex justify-content-center"> {/* Center pagination */}
+            <Pagination style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}> {/* Make pagination responsive to smaller screens */}
+                {
+                    categoryList.map((c) =>{
+                        return <Pagination.Item
+                            key = {c}
+                            active = {type === c}
+                            onClick = {() => setType(c)}
+                        >{c}
+                        </Pagination.Item>
+                    })
+                }
+            </Pagination>
+        </div>
+        <br/>
         <Container>
             <Row>
                 {
-                    sortedEvents.map((e) => {
+                    keptEvents.map((e) => {
                         return <Col key={e.name} xs={12} sm={12} md={6} lg={4} xl={3} style={{ marginBottom: "16px" }}>
                             <EventCard {...e}></EventCard>
                         </Col>
