@@ -5,7 +5,12 @@ import Source from "./Source.jsx";
 
 export default function Home (props) {
 
-    let dailyLesson = lessons.lessons[0]; // indexing should be controlled by the day!
+    // new day, new lesson
+    const d = new Date();
+    let day = d.getDate(); // returns 1 to 31
+    let index = day % lessons.lessons.length;
+
+    let dailyLesson = lessons.lessons[index];
     let sources = dailyLesson.sources;
 
     // controls whether the daily lesson sources are shown; controlled by a button
