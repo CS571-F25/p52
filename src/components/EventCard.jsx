@@ -4,7 +4,7 @@ export default function EventCard(props) {
     const renderName = splitEmTags(props.name);
     const renderDescription = splitEmTags(props.description);
 
-    return <Card>
+    return <Card style={{width: "fit-content"}}>
         {
             props.categories.map((c) => <p key={c}>{c}</p>)
         }
