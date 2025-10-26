@@ -80,8 +80,8 @@ export default function GetEvents(props) {
         })
     }
 
-    return <div>
-        <h1>{props.isUpcoming ? "Upcoming Events" : "Past Events"}</h1>
+    return <div style={{overflow: "scroll", scrollbarWidth: "none"}}>
+        <h1 style={{color: "white"}}>{props.isUpcoming ? "Upcoming Events" : "Past Events"}</h1>
         <br/>
         <div className="d-flex justify-content-center"> {/* Center pagination */}
             <Pagination style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}> {/* Make pagination responsive to smaller screens */}
@@ -98,7 +98,7 @@ export default function GetEvents(props) {
             </Pagination>
         </div>
         <br/>
-        <Container style={{width: "100vw", height: "100vh"}}> {/* Keep content positions consistent */}
+        <Container style={{width: "100vw", height: "100vh", maxWidth: "100%"}}> {/* Keep content positions consistent */}
             <Row>
                 {
                     keptEvents.map((e) => {
