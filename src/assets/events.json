@@ -73,7 +73,7 @@
             "categories": ["Singing"]
         },
         {
-            "upcoming": true,
+            "upcoming": false,
             "name": "Maedeup Bracelet Craft",
             "description": "Re-create the bracelet Rumi gave to Jinu.",
             "date": "TBD",
