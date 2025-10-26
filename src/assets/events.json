@@ -73,13 +73,24 @@
             "categories": ["Singing"]
         },
         {
-            "upcoming": true,
+            "upcoming": false,
             "name": "Maedeup Bracelet Craft",
             "description": "Re-create the bracelet Rumi gave to Jinu.",
             "date": "TBD",
             "time": "TBD",
             "location": "TBD",
-            "categories": ["DIY"]
+            "categories": ["DIY"],
+            "slideshow": "https://docs.google.com/presentation/d/e/2PACX-1vQuAUYLkiDJuGIZ-C-edO-zKYn2ihMlZdC97AA8pwf61QogQkGsi86ViNMrywIiFEwjfsX8FrJzzXY0/pubembed?start=false&loop=false&delayms=3000"
+        },
+        {
+            "upcoming": false,
+            "name": "Light Stick Craft",
+            "description": "Show off your favorite band by creating their light sticks!",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["DIY"],
+            "slideshow": "https://docs.google.com/presentation/d/e/2PACX-1vRVH43UmAohYOrm0AvgbVsVoGihdEV4N-_dfoxAic0tm1tqybAC7W6CboWFedcP2Ik-2taZnViFpkh1/pubembed?start=false&loop=true&delayms=3000"
         },
         {
             "upcoming": true,
