@@ -117,7 +117,7 @@ export default function GetEvents(props) {
         {
             !props.isUpcoming &&
             <>
-                <Container style={{overflow: "scroll", scrollbarWidth: "none", height: "100vh"}}>
+                <Container style={{overflow: "scroll", height: "100vh"}}>
                 {
                         displayEvents(keptEvents, props.isUpcoming)
                 }
