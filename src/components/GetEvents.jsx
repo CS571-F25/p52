@@ -109,7 +109,7 @@ export default function GetEvents(props) {
             <Container style={{width: "100vw", height: "100vh", maxWidth: "100%"}}> {/* Keep content positions consistent */}
                 <Row>
                     {
-                        displayEvents(keptEvents)
+                        displayEvents(keptEvents, props.isUpcoming)
                     }
                 </Row>
             </Container>
@@ -119,7 +119,7 @@ export default function GetEvents(props) {
             <>
                 <Container style={{height: "100vh"}}>
                 {
-                        displayEvents(keptEvents)
+                        displayEvents(keptEvents, props.isUpcoming)
                 }
                 </Container>
             </>
@@ -127,10 +127,19 @@ export default function GetEvents(props) {
     </div>
 }
 
-function displayEvents(keptEvents) {
-    return keptEvents.map((e) => {
-        return <Col key={e.name} xs={12} sm={12} md={6} lg={4} xl={3} style={{ marginBottom: "16px" }}>
-            <EventCard {...e}></EventCard>
-        </Col>
-    });
+function displayEvents(keptEvents, isUpcoming) {
+    if(isUpcoming)
+    {
+        return keptEvents.map((e) => {
+            return <Col key={e.name} xs={12} sm={12} md={6} lg={4} xl={3} style={{ marginBottom: "16px" }}>
+                <EventCard {...e} ></EventCard>
+            </Col>
+        });
+    }
+    else {
+        return keptEvents.map((e) => {
+            return <EventCard key={e.name} xs={12} sm={12} md={6} lg={4} xl={3} style={{ width: "100%" }} {...e}></EventCard>
+        });
+    }
+
 }
