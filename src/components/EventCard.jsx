@@ -10,19 +10,25 @@ export default function EventCard(props) {
                 {
                     props.categories.map((c) => <p key={c}>{c}</p>)
                 }
-                <h2>{renderName}</h2>
-                <p>{renderDescription}</p>
-                <br/>
-                <p><strong>Date: </strong>{props.date}</p>
-                <p><strong>Time: </strong>{props.time}</p>
-                <p><strong>Location: </strong>{props.location}</p>
             </>
         }
+        <h2>{renderName}</h2>
+        <p>{renderDescription}</p>
+        <br/>
+        <p><strong>Date: </strong>{props.date}</p>
+        <p><strong>Time: </strong>{props.time}</p>
+        <p><strong>Location: </strong>{props.location}</p>
         { !props.upcoming &&
             <>
-                <h2>{renderName}</h2>
                 <div style={{ width: '100%', height: '500px', overflow: 'hidden' }}>
-                    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQuAUYLkiDJuGIZ-C-edO-zKYn2ihMlZdC97AA8pwf61QogQkGsi86ViNMrywIiFEwjfsX8FrJzzXY0/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+                    <iframe src={props.slideshow}
+                        frameborder="0"
+                        width="960"
+                        height="569"
+                        allowfullscreen="true"
+                        mozallowfullscreen="true"
+                        webkitallowfullscreen="true">    
+                    </iframe>
                 </div>
             </>
         }

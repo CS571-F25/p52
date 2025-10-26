@@ -98,16 +98,34 @@ export default function GetEvents(props) {
             </Pagination>
         </div>
         <br/>
-        <Container style={{width: "100vw", height: "100vh", maxWidth: "100%"}}> {/* Keep content positions consistent */}
-            <Row>
+        {
+            props.isUpcoming &&
+            <Container style={{width: "100vw", height: "100vh", maxWidth: "100%"}}> {/* Keep content positions consistent */}
+                <Row>
+                    {
+                        displayEvents(keptEvents)
+                    }
+                </Row>
+            </Container>
+        }
+        {
+            !props.isUpcoming &&
+            <>
+                <p style={{color: "white"}}>Navigate through the slideshows by clicking on them and using the arrow keys.</p>
+                <Container style={{height: "100vh"}}>
                 {
-                    keptEvents.map((e) => {
-                        return <Col key={e.name} xs={12} sm={12} md={6} lg={4} xl={3} style={{ marginBottom: "16px" }}>
-                            <EventCard {...e}></EventCard>
-                        </Col>
-                    })
+                        displayEvents(keptEvents)
                 }
-            </Row>
-        </Container>
+                </Container>
+            </>
+        }
     </div>
+}
+
+function displayEvents(keptEvents) {
+    return keptEvents.map((e) => {
+        return <Col key={e.name} xs={12} sm={12} md={6} lg={4} xl={3} style={{ marginBottom: "16px" }}>
+            <EventCard {...e}></EventCard>
+        </Col>
+    });
 }
