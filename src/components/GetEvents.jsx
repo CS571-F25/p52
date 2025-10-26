@@ -86,7 +86,7 @@ export default function GetEvents(props) {
         })
     }
 
-    return <div style={{overflow: "scroll", scrollbarWidth: "none"}}>
+    return <div>
         <h1 style={{color: "white"}}>{props.isUpcoming ? "Upcoming Events" : "Past Events"}</h1>
         <br/>
         <div>
@@ -106,8 +106,8 @@ export default function GetEvents(props) {
         <br/>
         {
             props.isUpcoming &&
-            <Container style={{width: "100vw", height: "100vh", maxWidth: "100%"}}> {/* Keep content positions consistent */}
-                <Row>
+            <Container>
+                <Row style={{width: "100vw", maxWidth: "100%"}}> {/* Keep content positions consistent */}
                     {
                         displayEvents(keptEvents, props.isUpcoming)
                     }
@@ -117,7 +117,7 @@ export default function GetEvents(props) {
         {
             !props.isUpcoming &&
             <>
-                <Container style={{height: "100vh"}}>
+                <Container style={{overflow: "scroll", scrollbarWidth: "none", height: "100vh"}}>
                 {
                         displayEvents(keptEvents, props.isUpcoming)
                 }
