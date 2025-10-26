@@ -11,6 +11,12 @@ export default function GetEvents(props) {
 
     // Sort events by date and time
     const sortedEvents = eventList.sort((a, b) => {
+        // swap some orderings if events are past
+        let swap = 1;
+        if (!props.isUpcoming) {
+            swap = -1;
+        }
+
         // Handle "TBD" dates
         if (b.date === "TBD") return -1; // Place b after a
         if (a.date === "TBD") return 1; // Place a after b
@@ -19,7 +25,7 @@ export default function GetEvents(props) {
         if (b.time === "TBD" && a.time === "TBD") {
             const dateA = new Date(`${a.date}`);
             const dateB = new Date(`${b.date}`);
-            return dateA - dateB; // Ascending order
+            return swap*(dateA - dateB);  // Ascending order (if is upcoming)
         }
         else if (b.time === "TBD") {
             const dateA = new Date(`${a.date}`);
@@ -30,7 +36,7 @@ export default function GetEvents(props) {
                 return -1; // Place b after a
             }
             else {
-                return dateA - dateB;
+                return swap*(dateA - dateB); // Ascending order (if is upcoming)
             }
         }
         else if (a.time === "TBD") {
@@ -42,14 +48,14 @@ export default function GetEvents(props) {
                 return 1; // Place a after b
             }
             else {
-                return dateA - dateB;
+                return swap*(dateA - dateB); // Ascending order (if is upcoming)
             }
         }
         // have both time and date
         else {
             const dateA = new Date(`${a.date} ${a.time}`);
             const dateB = new Date(`${b.date} ${b.time}`);
-            return dateA - dateB; // Ascending order
+            return swap*(dateA - dateB); // Ascending order (if is upcoming)
         }
     });
 
@@ -111,7 +117,6 @@ export default function GetEvents(props) {
         {
             !props.isUpcoming &&
             <>
-                <p style={{color: "white"}}>Navigate through the slideshows by clicking on them and using the arrow keys.</p>
                 <Container style={{height: "100vh"}}>
                 {
                         displayEvents(keptEvents)

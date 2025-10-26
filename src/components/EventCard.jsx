@@ -4,7 +4,7 @@ export default function EventCard(props) {
     const renderName = splitEmTags(props.name);
     const renderDescription = splitEmTags(props.description);
 
-    return <Card style={{width: "fit-content"}}>
+    return <Card style={{width: "fit-content", borderRadius: "1rem"}}>
         { props.upcoming &&
             <>
                 {
@@ -20,15 +20,11 @@ export default function EventCard(props) {
         <p><strong>Location: </strong>{props.location}</p>
         { !props.upcoming &&
             <>
-                <div style={{ width: '100%', height: '500px', overflow: 'hidden' }}>
+                <div style={{ width: '100%', height: '500px' }}>
                     <iframe src={props.slideshow}
-                        frameborder="0"
-                        width="960"
-                        height="569"
-                        allowfullscreen="true"
-                        mozallowfullscreen="true"
-                        webkitallowfullscreen="true">    
-                    </iframe>
+                        width="800"
+                        height="474"
+                    ></iframe>
                 </div>
             </>
         }
