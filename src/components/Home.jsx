@@ -23,7 +23,7 @@ export default function Home (props) {
 
 
     return <div>
-        <Card>
+        <div style={{backgroundColor: "white", padding: "1.5rem", borderRadius: "1rem"}}>
             <h1>Home</h1>
             <p style={{textAlign: "left"}}>Welcome to the KPop Demon Hunters club website!</p>
             <p style={{textAlign: "left"}}>The KPop Demon Hunters club is a club inspired by the movie <em>KPop Demon Hunters</em> that explores music, dance, art, and Korean culture.</p>
@@ -93,7 +93,7 @@ export default function Home (props) {
                 }
 
             </Card>
-        </Card>
+        </div>
         <img src={footerImage} alt="Footer Image with Zoey, Rumi, and Mira gazing upwards" style={{ width: "60%", height: "auto" }} />
     </div>
 }
