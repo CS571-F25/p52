@@ -1,6 +1,17 @@
 import { Card } from "react-bootstrap";
+import { useRef, useEffect, useState } from "react";
 
 export default function EventCard(props) {
+    const contentRef = useRef(null);
+    const [iframeHeight, setIframeHeight] = useState(0);
+
+    useEffect(() => {
+        if (contentRef.current) {
+            const contentHeight = contentRef.current.offsetHeight;
+            setIframeHeight(2*contentHeight); // Set iframe height equal to 2*(rest of content's height)
+        }
+    }, []);
+
     const renderName = splitEmTags(props.name);
     const renderDescription = splitEmTags(props.description);
 
@@ -12,14 +23,16 @@ export default function EventCard(props) {
                 }
             </>
         }
-        <h2>{renderName}</h2>
-        <p>{renderDescription}</p>
-        <br/>
-        <p><strong>Date: </strong>{props.date}</p>
-        <p><strong>Time: </strong>{props.time}</p>
-        <p><strong>Location: </strong>{props.location}</p>
+        <div ref={contentRef}>
+            <h2>{renderName}</h2>
+            <p>{renderDescription}</p>
+            <br/>
+            <p><strong>Date: </strong>{props.date}</p>
+            <p><strong>Time: </strong>{props.time}</p>
+            <p><strong>Location: </strong>{props.location}</p>
+        </div>
         { !props.upcoming &&
-            <div style={{ width: "100%", height: "100%" }}>
+            <div style={{ width: "100%", height: `${iframeHeight}px` /* Dynamically set height*/}}>
                 <iframe src={props.slideshow}
                     style={{
                         width: "100%",

@@ -117,7 +117,7 @@ export default function GetEvents(props) {
         {
             !props.isUpcoming &&
             <>
-                <Container style={{overflow: "scroll", height: "100vh"}}>
+                <Container>
                 {
                         displayEvents(keptEvents, props.isUpcoming)
                 }
@@ -138,7 +138,7 @@ function displayEvents(keptEvents, isUpcoming) {
     }
     else {
         return keptEvents.map((e) => {
-            return <EventCard key={e.name} xs={12} sm={12} md={6} lg={4} xl={3} style={{ width: "100%" }} {...e}></EventCard>
+            return <EventCard key={e.name} xs={12} sm={12} md={6} lg={4} xl={3} {...e}></EventCard>
         });
     }
 
