@@ -16,6 +16,19 @@
 
 }
 
+.pageTitle {
+  color: white;
+  font-family: "KPDH";
+  font-size: 3rem;
+}
+
+@font-face {
+  font-family: 'KPDH';
+  src: url("./assets/hunters-k-pop-font/HuntersKPop-q29j0.ttf") format("truetype"),
+  url("./assets/KPDH-font/hunterskpop-q29j0-webfont.woff") format("woff"),
+  url("./assets/KPDH-font/hunterskpop-q29j0-webfont.woff2") format("woff2")
+}
+
 #root {
   width: 100vw;
 }

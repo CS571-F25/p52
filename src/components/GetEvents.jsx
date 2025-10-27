@@ -1,7 +1,7 @@
 import events from "../assets/events.json"
 import EventCard from "./EventCard";
 import { Container, Row, Col, Pagination } from "react-bootstrap";
-import { useState, useMemo } from "react";
+import { useState } from "react";
 
 export default function GetEvents(props) {
     // get upcoming events
@@ -87,7 +87,7 @@ export default function GetEvents(props) {
     }
 
     return <div>
-        <h1 style={{color: "white"}}>{props.isUpcoming ? "Upcoming Events" : "Past Events"}</h1>
+        <h1 className="pageTitle">{props.isUpcoming ? "Upcoming Events" : "Past Events"}</h1>
         <br/>
         <div>
             <Pagination style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}> {/* Make pagination responsive to smaller screens */}

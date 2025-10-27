@@ -23,7 +23,7 @@ export default function Home (props) {
 
 
     return <div>
-        <h1 style={{color: "white"}}>Home</h1>
+        <h1 className="pageTitle">Home</h1>
         <div style={{backgroundColor: "white", padding: "1.5rem", borderRadius: "1rem"}}>
             <p style={{textAlign: "left"}}>Welcome to the KPop Demon Hunters club website!</p>
             <p style={{textAlign: "left"}}>The KPop Demon Hunters club is a UW-Madison club inspired by the movie <em>KPop Demon Hunters</em> that explores music, dance, art, and Korean culture.</p>
