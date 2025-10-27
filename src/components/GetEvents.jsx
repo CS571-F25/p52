@@ -74,6 +74,14 @@ export default function GetEvents(props) {
     // Convert the Set to an array so can use map
     const categoryList = Array.from(uniqueCategories);
 
+    // Create a map of colors for categories
+    const categoryColors = new Map();
+    categoryList.forEach((category) => {
+        if (!categoryColors.has(category)) {
+            categoryColors.set(category, generateColor(category));
+        }
+    });
+
     // Update events based on category
     let keptEvents;
 
@@ -109,7 +117,7 @@ export default function GetEvents(props) {
             <Container>
                 <Row style={{width: "100vw", maxWidth: "100%"}}> {/* Keep content positions consistent */}
                     {
-                        displayEvents(keptEvents, props.isUpcoming)
+                        displayEvents(keptEvents, props.isUpcoming, categoryColors)
                     }
                 </Row>
             </Container>
@@ -119,7 +127,7 @@ export default function GetEvents(props) {
             <>
                 <Container>
                 {
-                        displayEvents(keptEvents, props.isUpcoming)
+                        displayEvents(keptEvents, props.isUpcoming, categoryColors)
                 }
                 </Container>
             </>
@@ -127,19 +135,32 @@ export default function GetEvents(props) {
     </div>
 }
 
-function displayEvents(keptEvents, isUpcoming) {
+// function to display event cards
+function displayEvents(keptEvents, isUpcoming, categoryColors) {
     if(isUpcoming)
     {
         return keptEvents.map((e) => {
             return <Col key={e.name} xs={12} sm={12} md={6} lg={4} xl={3} style={{ marginBottom: "16px" }}>
-                <EventCard {...e} ></EventCard>
+                <EventCard {...e} categoryColors={categoryColors} ></EventCard>
             </Col>
         });
     }
     else {
         return keptEvents.map((e) => {
-            return <EventCard key={e.name} xs={12} sm={12} md={6} lg={4} xl={3} {...e}></EventCard>
+            return <EventCard key={e.name} xs={12} sm={12} md={6} lg={4} xl={3} {...e} categoryColors={categoryColors}></EventCard>
         });
     }
+}
 
+// since "All" will be given a color, the first color is not used unless wraparound occurs
+const predefinedColors = [
+    "#9b0015ff", "#00ae20ff", "#006effff", "#FF33A1", "#A133FF", "#33FFF5", "#191587ff", "#ff92efff", "#59ff99ff"
+];
+let colorIndex = 0; // Global index to track the next color to use
+
+// Function to generate a unique color for each category
+function generateColor(category) {
+    const color = predefinedColors[colorIndex % predefinedColors.length]; // Use colors in a round-robin fashion
+    colorIndex++; // Increment the index for the next category
+    return color;
 }

@@ -16,20 +16,27 @@ export default function EventCard(props) {
     const renderDescription = splitEmTags(props.description);
 
     return <Card style={{width: "100%", height: "100%", borderRadius: "1rem", marginBottom: "16px"}}>
-        { props.upcoming &&
-            <>
-                {
-                    props.categories.map((c) => <p key={c}>{c}</p>)
-                }
-            </>
-        }
+        { props.upcoming && (
+            <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", justifyContent: "center", marginBottom: "16px" }}>
+                {props.categories.map((c) => (
+                    <div key={c} style={{ padding: "4px 8px", border: `2px solid ${props.categoryColors.get(c)}`, borderRadius: "4px" }}>
+                        {c}
+                    </div>
+                ))}
+            </div>
+        )}
         <div ref={contentRef}>
             <h2>{renderName}</h2>
             <p>{renderDescription}</p>
-            <br/>
+            {
+                props.upcoming &&<br/>
+            }
             <p><strong>Date: </strong>{props.date}</p>
             <p><strong>Time: </strong>{props.time}</p>
             <p><strong>Location: </strong>{props.location}</p>
+            {
+                !props.upcoming &&<br/>
+            }
         </div>
         { !props.upcoming &&
             <div style={{ width: "100%", height: `${iframeHeight}px` /* Dynamically set height*/}}>
