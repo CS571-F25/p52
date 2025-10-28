@@ -44,6 +44,11 @@
     background-color: #ff1493 !important; /* Replace with your desired color */
 }
 
+.card {
+  border-radius: 1rem !important;
+  margin-bottom: 16px;
+}
+
 h2 {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }

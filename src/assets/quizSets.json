@@ -82,6 +82,84 @@
                     ]
                 }
             ]
+        },
+        {
+            "title": "Which Saja Boy Character Are You?",
+            "type": "character",
+            "characters": ["Jinu", "Mystery", "Romance", "Baby", "Abby"],
+            "questions": [
+                {
+                    "question": "What would you do if someone reprimanded you?",
+                    "answers": [
+                        {
+                            "answer": "Whimper.",
+                            "solution": ["Mystery"]
+                        },
+                        {
+                            "answer": "Ignore them.",
+                            "solution": ["Baby"]
+                        },
+                        {
+                            "answer": "Reprimand them.",
+                            "solution": ["Jinu", "Abby"]
+                        },
+                        {
+                            "answer": "Smile at them.",
+                            "solution": ["Romance"]
+                        }
+                    ]
+                },
+                {
+                    "question": "What are people's first impression of you?",
+                    "answers": [
+                        {
+                            "answer": "I am intriguing and secretive.",
+                            "solution": ["Mystery"]
+                        },
+                        {
+                            "answer": "I am stunning.",
+                            "solution": ["Abby","Mystery","Baby","Jinu","Romance"]
+                        },
+                        {
+                            "answer": "I am very young.",
+                            "solution": ["Baby"]
+                        },
+                        {
+                            "answer": "I am a good leader.",
+                            "solution": ["Jinu"]
+                        },
+                        {
+                            "answer": "I am very strong.",
+                            "solution": ["Abby"]
+                        },
+                        {
+                            "answer": "I am a romantic.",
+                            "solution": ["Romance"]
+                        }
+                    ]
+                },
+                {
+                    "question": "Who is your Huntrix bias?",
+                    "answers": [
+                        {
+                            "answer": "Rumi",
+                            "solution": ["Jinu"]
+                        },
+                        {
+                            "answer": "Zoey",
+                            "solution": ["Mystery"]
+                        },
+                        {
+                            "answer": "Mira",
+                            "solution": ["Abby", "Romance"]
+                        },
+                        {
+                            "answer": "None of them.",
+                            "solution": ["Baby"]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

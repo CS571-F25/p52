@@ -90,7 +90,7 @@ export default function Quiz(props) {
         }
     };
 
-    return <Card>
+    return <Card className="card">
         <h2>{props.title}</h2>
         <br/>
         <Carousel
