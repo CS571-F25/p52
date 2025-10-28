@@ -29,7 +29,10 @@
   url("./assets/KPDH-font/hunterskpop-q29j0-webfont.woff2") format("woff2")
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+/* Make carousel be non-scrollable using the indicators at the bottom */
+.carousel-indicators {
+  pointer-events: none;
+}
 
 h2 {
   font-family: Georgia, 'Times New Roman', Times, serif;
