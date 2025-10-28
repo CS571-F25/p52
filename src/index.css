@@ -36,12 +36,20 @@
 
 /* Change the color of the indicators */
 .carousel-indicators [data-bs-target] {
-    background-color: #ff69b4 !important; /* Replace with your desired color */
+  background-color: #ff69b4 !important; /* Replace with your desired color */
 }
 
 /* Change the color of the active indicator */
 .carousel-indicators .active {
-    background-color: #ff1493 !important; /* Replace with your desired color */
+  background-color: #ff1493 !important; /* Replace with your desired color */
+}
+
+.correct-indicator {
+  background-color: green !important;
+}
+
+.wrong-indicator {
+  background-color: red !important;
 }
 
 .card {

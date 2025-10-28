@@ -3,7 +3,7 @@
         {
             "title": "Which Huntrix Character Are You?",
             "type": "character",
-            "characters": ["Zoey", "Mira", "Rumi"],
+            "solutionTypes": ["Zoey", "Mira", "Rumi"],
             "questions": [
                 {
                     "question": "What would you do if someone said you do not belong?",
@@ -86,7 +86,7 @@
         {
             "title": "Which Saja Boy Character Are You?",
             "type": "character",
-            "characters": ["Jinu", "Mystery", "Romance", "Baby", "Abby"],
+            "solutionTypes": ["Jinu", "Mystery", "Romance", "Baby", "Abby"],
             "questions": [
                 {
                     "question": "What would you do if someone reprimanded you?",
@@ -156,6 +156,72 @@
                         {
                             "answer": "None of them.",
                             "solution": ["Baby"]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "How Well Do You Know The Movie?",
+            "type": "test",
+            "solutionTypes": ["Correct", "Incorrect"],
+            "questions": [
+                {
+                    "question": "Why does Jinu's bird wear a tiny hat?",
+                    "answers": [
+                        {
+                            "answer": "Jinu made it for the bird.",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "The bird keeps taking it from Jinu's tiger.",
+                            "solution": ["Correct"]
+                        },
+                        {
+                            "answer": "The bird stole it from someone's head.",
+                            "solution": ["Incorrect"]
+                        }
+                    ]
+                },
+                {
+                    "question": "How many fans are waiting to watch \"How It's Done\"?",
+                    "answers": [
+                        {
+                            "answer": "50 Thousand.",
+                            "solution": ["Correct"]
+                        },
+                        {
+                            "answer": "1 Million.",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "100 Thousand.",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "50 Hundred.",
+                            "solution": ["Incorrect"]
+                        }
+                    ]
+                },
+                {
+                    "question": "What does Zoey's inner demon tell her?",
+                    "answers": [
+                        {
+                            "answer": "It tells her that she does not deserve family",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "It tells her that she is too much and never enough",
+                            "solution": ["Correct"]
+                        },
+                        {
+                            "answer": "It tells her that it is her fault that Huntrix fell apart",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "Zoey has no inner demon.",
+                            "solution": ["Incorrect"]
                         }
                     ]
                 }

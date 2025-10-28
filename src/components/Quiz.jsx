@@ -19,6 +19,26 @@ export default function Quiz(props) {
     const handleNext = (qIndex) => {
         // Check if an answer is selected for the current question
         if (selectedAnswers[qIndex] !== undefined) {
+            // change color if doing a test to indicate correctness
+            if (props.type === "test") {
+                // Update the indicator color based on the answer
+                const isCorrect = selectedAnswers[qIndex] === "correct"; // Replace with your logic
+                const indicatorClass = isCorrect ? "correct-indicator" : "wrong-indicator";
+
+                // get carousel indicators
+                const indicators = document.getElementById(props.title).childNodes[0];
+
+                console.log(indicators);
+                console.log(indicators.childNodes);
+
+                // set class on relevant button
+                indicators.childNodes[qIndex].classList.add(indicatorClass);
+
+                // document
+                //     .querySelectorAll(".carousel-indicators")
+                //     [qIndex].classList.add(indicatorClass);
+            }
+
             // Scroll to the next item
             carouselRef.current.next();
 
@@ -43,50 +63,51 @@ export default function Quiz(props) {
     };
 
     // calculates quiz results
-    const calculateResults = () => {
-        if (props.type === "character") {
-            // Create an object to hold the count for each character
-            const characterCounts = {};
+const calculateResults = () => {
+        // Create an object to hold the count for each possible solution type
+        const solutionCounts = {};
 
-            // Iterate through the questions
-            questions.forEach((question, qIndex) => {
-                // Find the selected answer for the current question
-                const selectedAnswer = selectedAnswers[qIndex];
+        // Iterate through the questions
+        questions.forEach((question, qIndex) => {
+            // Find the selected answer for the current question
+            const selectedAnswer = selectedAnswers[qIndex];
 
-                if (selectedAnswer) {
-                    // Find the answer object that matches the selected answer
-                    const answerObj = question.answers.find((a) => a.answer === selectedAnswer);
+            if (selectedAnswer) {
+                // Find the answer object that matches the selected answer
+                const answerObj = question.answers.find((a) => a.answer === selectedAnswer);
 
-                    if (answerObj && answerObj.solution) {
-                        // Increment the count for each character in the solution array
-                        answerObj.solution.forEach((character) => {
-                            if (!characterCounts[character]) {
-                                characterCounts[character] = 0;
-                            }
-                            characterCounts[character]++;
-                        });
-                    }
+                if (answerObj && answerObj.solution) {
+                    // Increment the count for each solution type in the solution array
+                    answerObj.solution.forEach((solutionType) => {
+                        if (!solutionCounts[solutionType]) {
+                            solutionCounts[solutionType] = 0;
+                        }
+                        solutionCounts[solutionType]++;
+                    });
                 }
-            });
+            }
+        });
 
+        let allSolutionResults = "";
+
+        // get results for each solution type
+        props.solutionTypes.map((solType) => {
+            allSolutionResults += `${solType}: ${solutionCounts[solType] ?? 0} / ${questions.length}\n`
+        })
+
+        if (props.type === "character") {
             // Find the character(s) with the highest count
-            const maxCount = Math.max(...Object.values(characterCounts));
-            const topCharacters = Object.keys(characterCounts).filter(
-                (character) => characterCounts[character] === maxCount
+            const maxCount = Math.max(...Object.values(solutionCounts));
+            const topCharacters = Object.keys(solutionCounts).filter(
+                (character) => solutionCounts[character] === maxCount
             );
 
-            let allChrResults = "";
-
-            // get results for each character
-            props.characters.map((chr) => {
-                allChrResults += `${chr}: ${characterCounts[chr] ?? 0} / ${questions.length}\n`
-            })
-
             // display result
-            setResult(`You are most like: ${topCharacters.join(" and ")}!\n${allChrResults}`);
-
-        } else if (props.type === "test") {
-            // Handle other quiz types if needed
+            setResult(`You are most like: ${topCharacters.join(" and ")}!\n${allSolutionResults}`);
+        }
+        else if (props.type === "test") {
+            // display result
+            setResult(allSolutionResults);
         }
     };
 
@@ -98,6 +119,7 @@ export default function Quiz(props) {
             style={{border: "3px solid #ff1493", height: "auto"}}
             controls={false}
             interval={null}
+            id={props.title}
         >
             {
                 questions.map((q, qIndex) => {
