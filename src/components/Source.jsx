@@ -10,6 +10,12 @@ export default function Source(props) {
     // title should be formatted like: "Title."
     const title = `"${props.title}."`;
 
+    // editor (may not be provided!) is formatted like: Edited by Editor,
+    let editor = props.editor ?? "";
+    if (editor) {
+        editor = `Edited by ${editor},`;
+    }
+
     // website is formatted like: Website,
     // will be italicized
     const website = props.website + ",";
@@ -35,6 +41,6 @@ export default function Source(props) {
 
     
     return <div>
-        <p>{author} {title} <em>{website}</em> {publisher} <a href={link}>{link}</a>. {accessed}</p>
+        <p>{author} {title} {editor} <em>{website}</em> {publisher} <a href={link}>{link}</a>. {accessed}</p>
     </div>
 }
