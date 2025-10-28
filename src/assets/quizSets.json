@@ -1,0 +1,87 @@
+{
+    "quizzes": [
+        {
+            "title": "Which Huntrix Character Are You?",
+            "type": "character",
+            "characters": ["Zoey", "Mira", "Rumi"],
+            "questions": [
+                {
+                    "question": "What would you do if someone said you do not belong?",
+                    "answers": [
+                        {
+                            "answer": "Try to get that person to like me.",
+                            "solution": ["Zoey"]
+                        },
+                        {
+                            "answer": "Hide.",
+                            "solution": ["Rumi"]
+                        },
+                        {
+                            "answer": "Proudly be different.",
+                            "solution": ["Mira"]
+                        }
+                    ]
+                },
+                {
+                    "question": "What would you do if someone gave you a vacation?",
+                    "answers": [
+                        {
+                            "answer": "Watch videos about turtles.",
+                            "solution": ["Zoey"]
+                        },
+                        {
+                            "answer": "Spend time with my friends.",
+                            "solution": ["Mira"]
+                        },
+                        {
+                            "answer": "Continue working.",
+                            "solution": ["Rumi"]
+                        }
+                    ]
+                },
+                {
+                    "question": "What would be your vacation destination?",
+                    "answers": [
+                        {
+                            "answer": "Couch.",
+                            "solution": ["Zoey", "Mira"]
+                        },
+                        {
+                            "answer": "What vacation?",
+                            "solution": ["Rumi"]
+                        }
+                    ]
+                },
+                {
+                    "question": "Who is your Saja Boy bias?",
+                    "answers": [
+                        {
+                            "answer": "Jinu",
+                            "solution": ["Rumi"]
+                        },
+                        {
+                            "answer": "Mystery",
+                            "solution": ["Zoey"]
+                        },
+                        {
+                            "answer": "Baby",
+                            "solution": []
+                        },
+                        {
+                            "answer": "Romance",
+                            "solution": []
+                        },
+                        {
+                            "answer": "Abby",
+                            "solution": ["Mira"]
+                        },
+                        {
+                            "answer": "None of them.",
+                            "solution": ["Mira"]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
