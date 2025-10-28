@@ -34,6 +34,16 @@
   pointer-events: none;
 }
 
+/* Change the color of the indicators */
+.carousel-indicators [data-bs-target] {
+    background-color: #ff69b4 !important; /* Replace with your desired color */
+}
+
+/* Change the color of the active indicator */
+.carousel-indicators .active {
+    background-color: #ff1493 !important; /* Replace with your desired color */
+}
+
 h2 {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }

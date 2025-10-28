@@ -84,7 +84,7 @@ export default function Quiz(props) {
 
             // display result
             setResult(`You are most like: ${topCharacters.join(" and ")}!\n${allChrResults}`);
-            
+
         } else if (props.type === "test") {
             // Handle other quiz types if needed
         }
@@ -95,7 +95,7 @@ export default function Quiz(props) {
         <br/>
         <Carousel
             ref={carouselRef}
-            style={{backgroundColor: "#ffc8e6ff", height: "auto"}}
+            style={{border: "3px solid #ff1493", height: "auto"}}
             controls={false}
             interval={null}
         >
@@ -104,7 +104,7 @@ export default function Quiz(props) {
                     // list of answers
                     const answers = q.answers;
 
-                    return <Carousel.Item key={qIndex} >
+                    return <Carousel.Item key={qIndex} style={{paddingTop:"1rem"}}>
                         <h3>{q.question}</h3>
                         <br/>
                         {
@@ -153,7 +153,7 @@ export default function Quiz(props) {
                 })
                 
             }
-            <Carousel.Item>
+            <Carousel.Item style={{paddingTop:"1rem"}}>
                 <h3>Results</h3>
                 <h4 style={{whiteSpace: "pre-wrap"}}>{result}</h4>
                 <br/>
