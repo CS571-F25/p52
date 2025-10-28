@@ -21,6 +21,12 @@ export default function Home (props) {
     // controls whether the daily lesson sources are shown; controlled by a button
     const [showSources, setShowSources] = useState(false);
 
+    // fetch the image from the source if it exists
+    let src = "";
+
+    if (dailyLesson.img) {
+        src = new URL(dailyLesson.img.src, import.meta.url).href;
+    }
 
     return <div>
         <h1 className="pageTitle">Home</h1>
@@ -38,6 +44,7 @@ export default function Home (props) {
                     <Col sm={12} md={6}>
                         <div>
                             <h3>Club Interest form</h3>
+                            <p>What activities are you interested in?</p>
                             <img src={formQR} alt="QR Code for Club Interest Form" style={{ width: "20%", height: "auto" }}></img>
                             <br/>
                             <a href="https://tinyurl.com/kdhclubform">https://tinyurl.com/kdhclubform</a>
@@ -45,6 +52,7 @@ export default function Home (props) {
                         <br/>
                         <div>
                             <h3>Club Discord</h3>
+                            <p>Discuss everything KPDH with other fans!<br/>We share updates and events here.</p>
                             <img src={discordQR} alt="QR Code for Discord Join Link" style={{ width: "22%", height: "auto" }}></img>
                             <br/>
                             <a href="https://discord.gg/HHbv3AZNSY">https://discord.gg/HHbv3AZNSY</a>
@@ -54,6 +62,7 @@ export default function Home (props) {
                     <Col sm={12} md={6}>
                         <div>
                             <h3>Availability Form</h3>
+                            <p>What meeting times work best for you?</p>
                             <img src={availabilityQR} alt="QR Code for Availability Form" style={{ width: "22%", height: "auto" }}></img>
                             <br/>
                             <a href="https://www.when2meet.com/?32132278-2l8BM">https://www.when2meet.com/?32132278-2l8BM</a>
@@ -61,6 +70,7 @@ export default function Home (props) {
                         <br/>
                         <div>
                             <h3>Club Mailing List</h3>
+                            <p>An invite link to the Outlook Mailing Group.<br/>We share updates and events here.</p>
                             <img src={mailingQR} alt="QR Code for Mailing List" style={{ width: "20%", height: "auto" }}></img>
                             <br/>
                             <a href="https://tinyurl.com/join-kdh-club-mailing">https://tinyurl.com/join-kdh-club-mailing</a>
@@ -75,7 +85,9 @@ export default function Home (props) {
             <Card>
 
                 <h3>{dailyLesson.title}</h3>
-
+                {
+                    dailyLesson.img == null ? <></> :<img src={src} alt={dailyLesson.img.alt} style={{ maxWidth: "100%", height: "auto" }} />
+                }
                 <br/>
 
                 {/* This styling will allow \n to be recognized. Inspired by: https://stackoverflow.com/questions/42547885/how-to-recognize-new-line-character-n-in-html*/}

@@ -61,7 +61,11 @@
         },
         {
             "title": "Norigae 노리개",
-            "content": "A norigae is a traditional Korean pendant usually worn by women. It was historically one of the few ornaments that could be worn across all social classes (though lower class women wore simpler norigae than upper class women), and was often a treasured heirloom passed down as a wedding gift.\nEach norigae is different, expressing an individual’s taste, identity, social status, and wishes. Possible wishes represented in norigae include good luck, protection, longevity, prosperity, and the hope for many children. Despite each norigae’s individuality, they share similarities, being each composed of a main ornament (paemul 패물), intricate knots (maedeup 매듭), tassels (sul 술), and a hook (ddidon 띠돈) for attaching the norigae. A norigae can have a varying number of pendants, with one pendant (danjak 단작) and three pendants (samjak 삼작) being the most popular.\nThe Huntrix members wear norigae during their “How It’s Done” performance. Rumi’s norigae has a Gajipangsok knot, which symbolizes abundance and continuity. Mira’s norigae has a butterfly knot, which symbolizes transformation and beauty. Zoey’s norigae has a chrysanthemum knot, which symbolizes longevity and good fortune.",
+            "img": {
+                "src": "../assets/vocab-pics/norigae.jpg",
+                "alt": "An up-close picture of Rumi, Mira, and Zoey's norigae. As indicated by the picture, Rumi's norigae is traditional, Mira's norigae is bold, and Zoey's norigae is fun."
+            },
+            "content": "A norigae is a traditional Korean pendant usually worn by women. It was historically one of the few ornaments that could be worn across all social classes (though lower class women wore simpler norigae than upper class women), and was often a treasured heirloom passed down as a wedding gift.\n\nEach norigae is different, expressing an individual’s taste, identity, social status, and wishes. Possible wishes represented in norigae include good luck, protection, longevity, prosperity, and the hope for many children. Despite each norigae’s individuality, they share similarities, being each composed of a main ornament (paemul 패물), intricate knots (maedeup 매듭), tassels (sul 술), and a hook (ddidon 띠돈) for attaching the norigae. A norigae can have a varying number of pendants, with one pendant (danjak 단작) and three pendants (samjak 삼작) being the most popular.\n\nThe Huntrix members wear norigae during their “How It’s Done” performance. Rumi’s norigae has a Gajipangsok knot, which symbolizes abundance and continuity. Mira’s norigae has a butterfly knot, which symbolizes transformation and beauty. Zoey’s norigae has a chrysanthemum knot, which symbolizes longevity and good fortune.",
                 "sources": [
                     {
                         "author": "Bradley, Hallie",
@@ -107,7 +111,11 @@
         },
         {
             "title": "Gat 갓",
-            "content": "A gat is a traditional Korean hat made of horsehair and bamboo. It has two main components: a brim (yangtae 양태) and a crown (moja 모자). The string attached to the gat is called a gatkkeun (갓끈). The gatkkeun can be decorated with beads of various materials, which helps weigh the gat down.\nThe gat reflects one’s social status and represents wisdom and dignity. Unlike in the west, where it is polite to remove your hat, it was considered respectful to keep your gat on. The gat was typically worn by men, especially noblemen, during the Joseon Dynasty (1392-1897 or 1392-1910, depending on the specification) — the time in which Jinu would have lived. The Saja Boys each wear a black gat, or heukrip (흑립), when they are first introduced and during their “Your Idol” performance.",
+            "img": {
+                "src": "../assets/vocab-pics/gat.jpg",
+                "alt": "A diagram explaining the different parts of a gat. It also depicts two different gat variations: the heukrip (흑립) and the jeollip (절립)."
+            },
+            "content": "A gat is a traditional Korean hat made of horsehair and bamboo. It has two main components: a brim (yangtae 양태) and a crown (moja 모자). The string attached to the gat is called a gatkkeun (갓끈). The gatkkeun can be decorated with beads of various materials, which helps weigh the gat down.\n\nThe gat reflects one’s social status and represents wisdom and dignity. Unlike in the west, where it is polite to remove your hat, it was considered respectful to keep your gat on. The gat was typically worn by men, especially noblemen, during the Joseon Dynasty (1392-1897 or 1392-1910, depending on the specification) — the time in which Jinu would have lived. The Saja Boys each wear a black gat, or heukrip (흑립), when they are first introduced and during their “Your Idol” performance.",
                 "sources": [
                     {
                         "title": "Gat(갓), The Korean Traditional Hat",
@@ -154,6 +162,10 @@
         },
         {
             "title": "Saja (사자)",
+            "img": {
+                "src": "../assets/vocab-pics/saja.png",
+                "alt": "A picture of the Saja Boys in their demon forms."
+            },
             "content": "Saja has two meanings. When pronounced with a short vowel (獅子), saja means \"lion.\" Hence, the Saja Boys’ logo is a lion and their fandom is called the Pride. On the other hand, when pronounced with a long vowel (使者), saja means \"envoy\" or \"messenger.\" In particular, jeoseung saja (저승사자) literally means \"underworld messenger.\" In Korean mythology, there are multiple jeoseung saja, each of whom record the names of the deceased and guide souls to the afterlife. They are not inherently malevolent spirits but instead maintain the cosmic balance—in some folktales, a jeoseung saja may display compassion and offer a few more moments of life. They all serve King Yama (or Yeomra-daewang 염라대왕), the King of the Underworld, who determines a soul’s fate after death. The jeoseung saja are usually depicted as men, each of whom wear a gat (갓), a traditional Korean hat that reflects their status as entities performing official duties. The Saja Boys similarly each wear a gat (갓). Like the two meanings of saja, the Saja Boys have a dual nature — the false, bubbly side they show during \"Soda Pop\" and their true, darker side they reveal during \"Your Idol.\"",
                 "sources": [
                     {
@@ -185,6 +197,63 @@
                         "link": "https://www.youtube.com/watch?v=qCmpU3ssip8"
                     }
                 ]
+        },
+
+        {
+            "title": "Saingeom 사인검",
+            "img": {
+                "src": "../assets/vocab-pics/saingeom.jpg",
+                "alt": "A picture of a real saingeom sword. It has a gray blade decorated with golden constellations."
+            },
+            "content": "Saingeom (사인검) or \"Four Tigers Sword\" is also called sainchamsageom, or \"Four Tigers Evil-Cutting Sword\". This is the name of the weapon Rumi wields. The saingeom is a ceremonial sword used in traditional Korean shamanic rituals (called gut 굿 rituals), protecting the people against spiritual evils rather than being used in battle. Hence, the blade is only sharpened at the front and is made of soft iron. It is also decorated with auspicious symbols and constellations in silver or gold.\n\nAdditionally, the saingeom is rare, because it is forged during the tiger year (In-nyeon), tiger month (In-wol), tiger day (In-il), and tiger hour (In-si), an alignment that occurs about once every 60 years. In Korean cosmology, four tigers protect the four cardinal directions, and it was believed that a sword made with stronger tiger energy had more of the positive spiritual power called Yang. Thus, the saingeom was considered the strongest spiritual weapon, as compared to the other types of ingeom (인검), or \"tiger sword\".\n\nThe saingeom originates from the Joseon Dynasty, during which it symbolized the authority of the royal family and was even used by kings during shamanic rituals.",
+            "sources": [
+                {
+                    "author": "Cambal, Abigail",
+                    "title": "Types of Korean Swords You Might Not Know About",
+                    "editor": "Juliana Cummings",
+                    "website": "Swordis",
+                    "date": "13 Feb. 2025",
+                    "link": "https://swordis.com/blog/types-of-korean-swords/"
+                },
+                {
+                    "title": "HUNTRIX Weapons: Korean Traditional Arms in K-Pop Demon Hunters",
+                    "website": "KoreAtlas",
+                    "link": "https://koreatlas.com/k-pop-demon-hunters-huntrix-weapons/",
+                    "accessed": "6 Oct. 2025"
+                },
+                {
+                    "title": "Korean Mythology",
+                    "website": "TV Tropes",
+                    "link": "https://tvtropes.org/pmwiki/pmwiki.php/Myth/KoreanMythology",
+                    "accessed": "27 Oct. 2025"
+                },
+                {
+                    "title": "Korean Shamanism in Kpop Demon Hunters: The Hidden Role of the Mudang",
+                    "website": "The Unwritten Past",
+                    "date": "22 Aug. 2025",
+                    "link": "https://theunwrittenpast.com/korean-shamanism-in-kpop-demon-hunters/"
+                },
+                {
+                    "title": "Korean Sword",
+                    "website": "Military Wiki",
+                    "publisher": "Fandom, Inc.",
+                    "link": "https://military-history.fandom.com/wiki/Korean_sword",
+                    "accessed": "27 Oct. 2025"
+                },
+                {
+                    "title": "The Origin of ‘KPop Demon Hunters’ Weapons: 100% REAL and Where to Find Them",
+                    "website": "KoreaTravelPost",
+                    "date": "5 July 2025",
+                    "link": "https://www.koreatravelpost.com/kpop-demon-hunters-huntrix-weapons-history-real-life-origin-places-to-visit/"
+                },
+                {
+                    "author": "Quaresma, Milena",
+                    "title": "K-Pop Demon Hunters: Traditional Korean Easter Eggs You Probably Missed",
+                    "website": "Lingopie",
+                    "date": "9 Sept. 2025",
+                    "link": "https://lingopie.com/blog/k-pop-demon-hunters-traditional-korean-easter-eggs-you-probably-missed/"
+                }
+            ]
         }
     ]
 }
