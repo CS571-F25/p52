@@ -49,6 +49,13 @@
   margin-bottom: 16px;
 }
 
+.quiz-button {
+  background-color:#ff1493;
+  color: white;
+  font-weight: bold;
+  border-radius: 0.5rem;
+}
+
 h2 {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }

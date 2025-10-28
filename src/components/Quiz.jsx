@@ -147,6 +147,7 @@ export default function Quiz(props) {
                                     }, 1000); // delay (in milliseconds) so the user does not see the reset
                                 }
                             }} 
+                            className="quiz-button"
                         >Submit</button>
                         <br/><br/><br/>
                     </Carousel.Item>
@@ -171,6 +172,7 @@ export default function Quiz(props) {
                             setResult("");
                         }, 1000); // delay (in milliseconds) so the user does not see the reset
                     }} 
+                    className="quiz-button"
                 >Restart</button>
                 <br/><br/><br/>
             </Carousel.Item>
