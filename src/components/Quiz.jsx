@@ -12,12 +12,21 @@ export default function Quiz(props) {
 
     // State to track the selected answer for each question
     const [selectedAnswers, setSelectedAnswers] = useState({});
+    // track result
+    const [result, setResult] = useState("");
 
     // determines whether scrolling to the next question is valid
     const handleNext = (qIndex) => {
         // Check if an answer is selected for the current question
         if (selectedAnswers[qIndex] !== undefined) {
-            carouselRef.current.next(); // Scroll to the next item
+            // Scroll to the next item
+            carouselRef.current.next();
+
+            // calculate results
+            if (qIndex === questions.length - 1) {
+                calculateResults();
+            }
+
             return true;
         } else {
             alert("Please select an answer before proceeding.");
@@ -31,6 +40,54 @@ export default function Quiz(props) {
             ...prev,
             [qIndex]: answer,
         }));
+    };
+
+    // calculates quiz results
+    const calculateResults = () => {
+        if (props.type === "character") {
+            // Create an object to hold the count for each character
+            const characterCounts = {};
+
+            // Iterate through the questions
+            questions.forEach((question, qIndex) => {
+                // Find the selected answer for the current question
+                const selectedAnswer = selectedAnswers[qIndex];
+
+                if (selectedAnswer) {
+                    // Find the answer object that matches the selected answer
+                    const answerObj = question.answers.find((a) => a.answer === selectedAnswer);
+
+                    if (answerObj && answerObj.solution) {
+                        // Increment the count for each character in the solution array
+                        answerObj.solution.forEach((character) => {
+                            if (!characterCounts[character]) {
+                                characterCounts[character] = 0;
+                            }
+                            characterCounts[character]++;
+                        });
+                    }
+                }
+            });
+
+            // Find the character(s) with the highest count
+            const maxCount = Math.max(...Object.values(characterCounts));
+            const topCharacters = Object.keys(characterCounts).filter(
+                (character) => characterCounts[character] === maxCount
+            );
+
+            let allChrResults = "";
+
+            // get results for each character
+            props.characters.map((chr) => {
+                allChrResults += `${chr}: ${characterCounts[chr] ?? 0} / ${questions.length}\n`
+            })
+
+            // display result
+            setResult(`You are most like: ${topCharacters.join(" and ")}!\n${allChrResults}`);
+            
+        } else if (props.type === "test") {
+            // Handle other quiz types if needed
+        }
     };
 
     return <Card>
@@ -47,18 +104,27 @@ export default function Quiz(props) {
                     // list of answers
                     const answers = q.answers;
 
-                    return <Carousel.Item key={qIndex}>
+                    return <Carousel.Item key={qIndex} >
                         <h3>{q.question}</h3>
                         <br/>
                         {
                             answers.map((a, index) => (
-                                <div key={index} style={{ marginBottom: "8px", textAlign: "left" }}>
+                                <div
+                                    key={index}
+                                    style={{
+                                        display: "flex",
+                                        alignItems: "center", // Aligns the radio button and text vertically
+                                        marginBottom: "1rem",
+                                        paddingLeft: "5rem"
+                                    }}
+                                >
                                     <input
                                         type="radio"
                                         id={`answer-${qIndex}-${index}`}
                                         name={`quiz-answer-${qIndex}`}
                                         value={a.answer}
                                         onChange={() => handleAnswerChange(qIndex, a.answer)}
+                                        style={{ marginRight: "8px" }} // Adds spacing between the radio button and text
                                     />
                                     <label htmlFor={`answer-${qIndex}-${index}`} style={{ marginLeft: "4px" }}>
                                         {a.answer}
@@ -89,6 +155,7 @@ export default function Quiz(props) {
             }
             <Carousel.Item>
                 <h3>Results</h3>
+                <h4 style={{whiteSpace: "pre-wrap"}}>{result}</h4>
                 <br/>
                 <button
                     type="submit"
@@ -98,6 +165,11 @@ export default function Quiz(props) {
 
                         // reset answers
                         setSelectedAnswers({});
+
+                        // reset result
+                        setTimeout( () => {
+                            setResult("");
+                        }, 1000); // delay (in milliseconds) so the user does not see the reset
                     }} 
                 >Restart</button>
                 <br/><br/><br/>

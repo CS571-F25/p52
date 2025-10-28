@@ -2,6 +2,8 @@
     "quizzes": [
         {
             "title": "Which Huntrix Character Are You?",
+            "type": "character",
+            "characters": ["Zoey", "Mira", "Rumi"],
             "questions": [
                 {
                     "question": "What would you do if someone said you do not belong?",
