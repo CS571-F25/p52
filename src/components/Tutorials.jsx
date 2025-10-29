@@ -39,7 +39,7 @@ export default function Tutorials () {
           diy ?
             <div>
             <br/>
-            <h4>Norigae 노리개</h4>-
+            <h4>Norigae 노리개</h4>
             <p>Rumi</p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/cIIprgB2uP4?si=FVHlqyeh9bfD6tUH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             <br/><br/>

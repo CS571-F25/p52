@@ -3,18 +3,18 @@ import { Link, Outlet } from "react-router";
 
 export default function Layout(props) {
   return <div>
-    <Navbar className="mx-auto" bg="light" variant="light" style={{backgroundColor:"white", maxWidth: "50%", borderRadius: "1rem"}}>
+    <Navbar className="mx-auto" bg="light" variant="light" style={{backgroundColor:"white", maxWidth: "fit-content", borderRadius: "1rem"}}>
       <Container>
         {/* <Navbar.Brand as={Link} to="/">
           <img/> TODO: create home image
         </Navbar.Brand> */}
         <Nav className="mx-auto">
           <Nav.Link as={Link} to="/">Home</Nav.Link>
-          <Nav.Link as={Link} to="/about">About Us</Nav.Link>
           <Nav.Link as={Link} to="/upcoming-events">Upcoming Events</Nav.Link>
           <Nav.Link as={Link} to="/past-events">Past Events</Nav.Link>
           <Nav.Link as={Link} to="/quizzes">Quizzes</Nav.Link>
           <Nav.Link as={Link} to="/tutorials">Tutorials</Nav.Link>
+          <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
         </Nav>
       </Container>
     </Navbar>
