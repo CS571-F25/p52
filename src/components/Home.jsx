@@ -82,7 +82,7 @@ export default function Home (props) {
             <br/>
             {/* Daily Lesson */}
             <h2>Lesson of the Day</h2>
-            <Card>
+            <Card style={{border: "3px solid #ff1493"}}>
 
                 <h3>{dailyLesson.title}</h3>
                 {
@@ -94,7 +94,7 @@ export default function Home (props) {
                 <p style={{whiteSpace: "pre-wrap", textAlign: "left"}}>{dailyLesson.content}</p>
 
                 <br/>
-                <Button onClick={()=>{setShowSources(s=>!s)}}>Sources</Button>
+                <button className="purple-button" onClick={()=>{setShowSources(s=>!s)}}>{showSources ? "Hide " : "Show "}Sources</button>
                 <br/>
                 {
                     showSources ?

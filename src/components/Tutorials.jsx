@@ -6,11 +6,13 @@ export default function Tutorials () {
   const [dances, setDances] = useState(false);
   const [diy, setDiy] = useState(false);
 
-  return <div style={{backgroundColor: "white", padding: "1.5rem", borderRadius: "1rem"}}>
+  return <div>
+    <h1 className="pageTitle">Tutorials</h1>
+    <div style={{backgroundColor: "white", padding: "1.5rem", borderRadius: "1rem"}}>
     <Container>
       <h3>Dances</h3>
       <p>Learn the choreography of your favorite songs!</p>
-      <Button onClick={()=>{setDances(s=>!s)}} style={{backgroundColor:"#ff0080ff"}}>{dances ? "Hide Dances" : "Show Dances"}</Button>
+      <button className="quiz-button" onClick={()=>{setDances(s=>!s)}} style={{backgroundColor:"#ff0080ff"}}>{dances ? "Hide Dances" : "Show Dances"}</button>
         <br/>
         {
           dances ?
@@ -33,7 +35,7 @@ export default function Tutorials () {
       <br/><br/><br/>
       <h3>DIY</h3>
       <p>Learn how to make various crafts from the movie!</p>
-      <Button onClick={()=>{setDiy(s=>!s)}} style={{backgroundColor:"#ff0080ff"}}>{diy ? "Hide DIY" : "Show DIY"}</Button>
+      <button className="quiz-button" onClick={()=>{setDiy(s=>!s)}} style={{backgroundColor:"#ff0080ff"}}>{diy ? "Hide DIY" : "Show DIY"}</button>
         <br/>
         {
           diy ?
@@ -50,12 +52,13 @@ export default function Tutorials () {
             <iframe width="560" height="315" src="https://www.youtube.com/embed/7QTVLYQKyIY?si=eNvrEZTgNkKGvYYF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             <br/><br/>
             <br/>
-            <h4>Maedeup 매듭 Bracelet (Jinu's bracelet)</h4>
+            <h4>Maedeup 매듭 Bracelet (Jinu's Bracelet)</h4>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/YPtUIqpQ9ew?si=oLedYw-gMYdGEvbl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             </div>
           : <></>
         }
       <br/>
     </Container>
+  </div>
   </div>
 }
