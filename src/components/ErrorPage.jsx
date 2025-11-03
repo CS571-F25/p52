@@ -5,5 +5,10 @@ export default function ErrorPage(props) {
 
     return <div>
         <h1 className="pageTitle">404 Error</h1>
+        <div className="infoCard">
+            Uh oh! Demons are trying to stop you from sealing the Honmoon.
+            <br/><br/>
+            Quick, return <a href="/">home</a>.
+        </div>
     </div>
 }
