@@ -8,7 +8,10 @@ export default function Source(props) {
     }
 
     // title should be formatted like: "Title."
-    const title = `"${props.title}."`;
+    // if ! and ? are at the end of the title, don't add the extra period
+    let punctuation = isPunctuation(props.title[props.title.length - 1]) ? "" : "."
+
+    const title = `"${props.title}${punctuation}"`;
 
     // editor (may not be provided!) is formatted like: Edited by Editor,
     let editor = props.editor ?? "";
@@ -43,4 +46,11 @@ export default function Source(props) {
     return <div>
         <p>{author} {title} {editor} <em>{website}</em> {publisher} <a href={link}>{link}</a>. {accessed}</p>
     </div>
+}
+
+function isPunctuation(c) {
+    if (c === "!") return true;
+    if (c === "?") return true;
+
+    return false;
 }
