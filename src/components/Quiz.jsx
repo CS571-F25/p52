@@ -1,5 +1,5 @@
 import {Card, Carousel} from "react-bootstrap"
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 // gets a quiz with a title and a list of questions
 // each question gets its own carousel
@@ -15,30 +15,16 @@ export default function Quiz(props) {
     // track result
     const [result, setResult] = useState("");
 
+    // create a base array of no accuracies for each question
+    const baseAccuracies = questions.map(() => "");
+
+    // track accuracy of each answer
+    const [accuracies, setAccuracies] = useState(baseAccuracies);
+
     // determines whether scrolling to the next question is valid
     const handleNext = (qIndex) => {
         // Check if an answer is selected for the current question
         if (selectedAnswers[qIndex] !== undefined) {
-            // change color if doing a test to indicate correctness
-            if (props.type === "test") {
-                // Update the indicator color based on the answer
-                const isCorrect = selectedAnswers[qIndex] === "correct"; // Replace with your logic
-                const indicatorClass = isCorrect ? "correct-indicator" : "wrong-indicator";
-
-                // get carousel indicators
-                const indicators = document.getElementById(props.title).childNodes[0];
-
-                console.log(indicators);
-                console.log(indicators.childNodes);
-
-                // set class on relevant button
-                indicators.childNodes[qIndex].classList.add(indicatorClass);
-
-                // document
-                //     .querySelectorAll(".carousel-indicators")
-                //     [qIndex].classList.add(indicatorClass);
-            }
-
             // Scroll to the next item
             carouselRef.current.next();
 
@@ -46,6 +32,27 @@ export default function Quiz(props) {
             if (qIndex === questions.length - 1) {
                 calculateResults();
             }
+
+            // calculate accuracy of question
+            setAccuracies((prev) => {
+                // Get the selected answer
+                const selectedAnswer = selectedAnswers[qIndex];
+
+                // Find the corresponding answer object
+                const answerObj = questions[qIndex].answers.find((a) => a.answer === selectedAnswer);
+
+                // Create a shallow copy of the previous array
+                const updated = [...prev];
+
+                // Determine accuracy based on the solution value
+                if (answerObj && answerObj.solution.includes("Correct")) {
+                    updated[qIndex] = true; // Correct answer
+                } else {
+                    updated[qIndex] = false; // Incorrect answer
+                }
+
+                return updated; 
+            });
 
             return true;
         } else {
@@ -58,12 +65,12 @@ export default function Quiz(props) {
     const handleAnswerChange = (qIndex, answer) => {
         setSelectedAnswers((prev) => ({
             ...prev,
-            [qIndex]: answer,
+            [qIndex]: answer
         }));
     };
 
     // calculates quiz results
-const calculateResults = () => {
+    const calculateResults = () => {
         // Create an object to hold the count for each possible solution type
         const solutionCounts = {};
 
@@ -111,93 +118,115 @@ const calculateResults = () => {
         }
     };
 
-    return <Card className="card">
+    return <Card className="card" >
         <h2>{props.title}</h2>
         <br/>
-        <Carousel
-            ref={carouselRef}
-            style={{border: "3px solid #ff1493", height: "auto"}}
-            controls={false}
-            interval={null}
-            id={props.title}
-        >
+        <div style={{border: "3px solid #ff1493"}}>
+            <Carousel
+                ref={carouselRef}
+                style={{ height: "auto"}}
+                controls={false}
+                interval={null}
+                id={props.title}
+            >
+                {
+                    questions.map((q, qIndex) => {
+                        // list of answers
+                        const answers = q.answers;
+
+                        return <Carousel.Item key={qIndex} style={{paddingTop:"1rem"}}>
+                            <h3>{q.question}</h3>
+                            <br/>
+                            {
+                                answers.map((a, index) => (
+                                    <div
+                                        key={index}
+                                        style={{
+                                            display: "flex",
+                                            alignItems: "center", // Aligns the radio button and text vertically
+                                            marginBottom: "1rem",
+                                            paddingLeft: "5rem"
+                                        }}
+                                    >
+                                        <input
+                                            type="radio"
+                                            id={`answer-${qIndex}-${index}`}
+                                            name={`quiz-answer-${qIndex}`}
+                                            value={a.answer}
+                                            onChange={() => handleAnswerChange(qIndex, a.answer)}
+                                            style={{ marginRight: "8px" }} // Adds spacing between the radio button and text
+                                        />
+                                        <label htmlFor={`answer-${qIndex}-${index}`} style={{ marginLeft: "4px" }}>
+                                            {a.answer}
+                                        </label>
+                                    </div>
+                                ))
+                            }
+                            <br/>
+                            <button
+                                type="submit"
+                                onClick={() => {
+                                    // Check before scrolling
+                                    if (handleNext(qIndex)) {
+                                        // Reset radio buttons for the current question so it is not selected when the quiz is reset
+                                        setTimeout( () => {
+                                            const radios = document.querySelectorAll(`input[name="quiz-answer-${qIndex}"]`);
+                                            radios.forEach((radio) => {
+                                                radio.checked = false;
+                                            });
+                                        }, 1000); // delay (in milliseconds) so the user does not see the reset
+                                    }
+                                }} 
+                                className="quiz-button"
+                            >Submit</button>
+                            <br/><br/><br/>
+                        </Carousel.Item>
+                    })
+                    
+                }
+                <Carousel.Item style={{paddingTop:"1rem"}}>
+                    <h3>Results</h3>
+                    <h4 style={{whiteSpace: "pre-wrap"}}>{result}</h4>
+                    <br/>
+                    <button
+                        type="submit"
+                        onClick={() => {
+                            // Scroll to first item
+                            carouselRef.current.next()
+
+                            // reset answers
+                            setSelectedAnswers({});
+                            // reset accuracies
+                            setAccuracies(baseAccuracies);
+
+                            // reset result
+                            setTimeout( () => {
+                                setResult("");
+                            }, 1000); // delay (in milliseconds) so the user does not see the reset
+                        }} 
+                        className="quiz-button"
+                    >Restart</button>
+                    <br/><br/><br/>
+                </Carousel.Item>
+            </Carousel>
             {
-                questions.map((q, qIndex) => {
-                    // list of answers
-                    const answers = q.answers;
+                props.type === "test" &&
+                <div className="custom-indicators" style={{"marginTop": 0, "marginBottom": 20}}>
+                    {questions.map((_, index) => {
+                        const accuracy = accuracies[index];
+                        let colorClass = "unanswered";
+                        if (accuracy === true) colorClass = "correct";
+                        else if (accuracy === false) colorClass = "incorrect";
 
-                    return <Carousel.Item key={qIndex} style={{paddingTop:"1rem"}}>
-                        <h3>{q.question}</h3>
-                        <br/>
-                        {
-                            answers.map((a, index) => (
-                                <div
-                                    key={index}
-                                    style={{
-                                        display: "flex",
-                                        alignItems: "center", // Aligns the radio button and text vertically
-                                        marginBottom: "1rem",
-                                        paddingLeft: "5rem"
-                                    }}
-                                >
-                                    <input
-                                        type="radio"
-                                        id={`answer-${qIndex}-${index}`}
-                                        name={`quiz-answer-${qIndex}`}
-                                        value={a.answer}
-                                        onChange={() => handleAnswerChange(qIndex, a.answer)}
-                                        style={{ marginRight: "8px" }} // Adds spacing between the radio button and text
-                                    />
-                                    <label htmlFor={`answer-${qIndex}-${index}`} style={{ marginLeft: "4px" }}>
-                                        {a.answer}
-                                    </label>
-                                </div>
-                            ))
-                        }
-                        <br/>
-                        <button
-                            type="submit"
-                            onClick={() => {
-                                // Check before scrolling
-                                if (handleNext(qIndex)) {
-                                    // Reset radio buttons for the current question so it is not selected when the quiz is reset
-                                    setTimeout( () => {
-                                        const radios = document.querySelectorAll(`input[name="quiz-answer-${qIndex}"]`);
-                                        radios.forEach((radio) => {
-                                            radio.checked = false;
-                                        });
-                                    }, 1000); // delay (in milliseconds) so the user does not see the reset
-                                }
-                            }} 
-                            className="quiz-button"
-                        >Submit</button>
-                        <br/><br/><br/>
-                    </Carousel.Item>
-                })
-                
+                        return (
+                        <div
+                            key={index}
+                            className={`indicator ${colorClass}`}
+                        />
+                        );
+                    })}
+                </div>
             }
-            <Carousel.Item style={{paddingTop:"1rem"}}>
-                <h3>Results</h3>
-                <h4 style={{whiteSpace: "pre-wrap"}}>{result}</h4>
-                <br/>
-                <button
-                    type="submit"
-                    onClick={() => {
-                        // Scroll to first item
-                        carouselRef.current.next()
-
-                        // reset answers
-                        setSelectedAnswers({});
-
-                        // reset result
-                        setTimeout( () => {
-                            setResult("");
-                        }, 1000); // delay (in milliseconds) so the user does not see the reset
-                    }} 
-                    className="quiz-button"
-                >Restart</button>
-                <br/><br/><br/>
-            </Carousel.Item>
-        </Carousel>
+        </div>
     </Card>
 }

@@ -44,12 +44,34 @@
   background-color: #ff1493 !important; /* Replace with your desired color */
 }
 
-.correct-indicator {
-  background-color: green !important;
+.custom-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 
-.wrong-indicator {
-  background-color: red !important;
+.custom-indicators .indicator {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+/* Default (unanswered) */
+.custom-indicators .indicator.unanswered {
+  background-color: #0e0066;
+}
+
+/* Correct answer */
+.custom-indicators .indicator.correct {
+  background-color: #32cd32; /* green */
+}
+
+/* Incorrect answer */
+.custom-indicators .indicator.incorrect {
+  background-color: #ff0000; /* red */
 }
 
 .card {
