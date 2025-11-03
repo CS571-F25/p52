@@ -29,6 +29,15 @@
   url("./assets/KPDH-font/hunterskpop-q29j0-webfont.woff2") format("woff2")
 }
 
+.pagination .page-item.active .page-link {
+  border-color: #ff1493 !important;
+  background-color:  #ff1493 !important;
+}
+
+.pagination .page-item .page-link {
+  font-weight: bold !important;
+}
+
 /* Make carousel be non-scrollable using the indicators at the bottom */
 .carousel-indicators {
   pointer-events: none;
