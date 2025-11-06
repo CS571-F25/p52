@@ -8,6 +8,12 @@ import lessons from "../assets/dailyLessons.json"
 import Source from "./Source.jsx";
 import footerImage from "../assets/KPDH-Footer.png";
 
+import gatImg from "../assets/vocab-pics/gat.jpg";
+import norigaeImg from "../assets/vocab-pics/norigae.jpg";
+import saingeomImg from "../assets/vocab-pics/saingeom.jpg";
+import sajaImg from "../assets/vocab-pics/saja.png";
+import SunbaeHoobaeImg from "../assets/vocab-pics/sunbae-hoobae.png";
+
 export default function Home (props) {
 
     // new day, new lesson
