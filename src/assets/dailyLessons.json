@@ -278,5 +278,25 @@
                     "link": "https://linguasia.com/sunbae"
                 }
             ]
+        },
+
+        {
+            "title": "Nim (님)",
+            "img": {
+                "src": "../assets/vocab-pics/nim.png",
+                "alt": "A picture of Doctor Han and the Huntrix band members greeting each other."
+            },
+            "content": "In KPop Demon Hunters, Doctor Han refers to Rumi as \"Rumi Nim.\" Nim (님) is an honorific similar to Mr./Ms. in English. So, \"Rumi Nim\" can be translated as \"Ms. Rumi.\"\n\nNim is also placed after occupations and titles. For example, the word for teacher is seonsaeng (선생), and when talking to or about a teacher, you would say seonsaengnim (선생님). If you want to specify one’s family name in addition to their title, you would place the name in front of the title: Park seonsaengnim (박 선생님) means Teacher Park. Similarly, nim can be placed after family titles. For example, the honorific family title for grandmother is halmeonim (할머님).",
+            "sources": [
+                {
+                    "author": "Armstrong, Joe",
+                    "title": "Korean Honorifics – How to Speak Respectfully in Korean",
+                    "website": "90 Day Korean",
+                    "publisher": "90 Day Languages LLC",
+                    "date": "10 Nov. 2025",
+                    "link": "https://www.90daykorean.com/korean-honorifics/"
+                }
+            ]
+
         }
     ]
