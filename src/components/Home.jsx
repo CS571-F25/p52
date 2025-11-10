@@ -17,7 +17,7 @@ export default function Home (props) {
     let day = d.getDate(); // returns 1 to 31
     let index = day % lessons.length;
 
-    let dailyLesson = lessons[8];
+    let dailyLesson = lessons[index];
     let sources = dailyLesson.sources;
 
     // controls whether the daily lesson sources are shown; controlled by a button
