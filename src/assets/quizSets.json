@@ -229,7 +229,7 @@
         },
 
         {
-            "title": "Who said that?",
+            "title": "Who Said That?",
             "type": "test",
             "solutionTypes": ["Correct", "Incorrect"],
             "questions": [
@@ -246,6 +246,10 @@
                         },
                         {
                             "answer": "Rumi",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "Zoey",
                             "solution": ["Incorrect"]
                         }
                     ]
