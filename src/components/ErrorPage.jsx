@@ -1,3 +1,5 @@
+import {Link} from "react-router";
+
 export default function ErrorPage(props) {
 
     // TODO: add link back to home page
@@ -8,7 +10,7 @@ export default function ErrorPage(props) {
         <div className="infoCard">
             Uh oh! Demons are trying to stop you from sealing the Honmoon.
             <br/><br/>
-            Quick, return <a href="/">home</a>.
+            Quick, return <Link to="/">home</Link>.
         </div>
     </div>
 }
