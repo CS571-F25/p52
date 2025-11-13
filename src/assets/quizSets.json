@@ -226,6 +226,220 @@
                     ]
                 }
             ]
+        },
+
+        {
+            "title": "Who said that?",
+            "type": "test",
+            "solutionTypes": ["Correct", "Incorrect"],
+            "questions": [
+                {
+                    "question": "\"Our music ignites the soul and brings people together.\"",
+                    "answers": [
+                        {
+                            "answer": "Jinu",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "Celine",
+                            "solution": ["Correct"]
+                        },
+                        {
+                            "answer": "Rumi",
+                            "solution": ["Incorrect"]
+                        }
+                    ]
+                },
+                {
+                    "question": "\"I love my girls.\"",
+                    "answers": [
+                        {
+                            "answer": "Bobby",
+                            "solution": ["Correct"]
+                        },
+                        {
+                            "answer": "Celine",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "Zoey",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "Mira",
+                            "solution": ["Incorrect"]
+                        }
+                    ]
+                },
+                {
+                    "question": "\"Every snowflake is special. But one snowflake is probably the best.\"",
+                    "answers": [
+                        {
+                            "answer": "Gwi-Ma",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "Idol Awards Host",
+                            "solution": ["Correct"]
+                        },
+                        {
+                            "answer": "Mira",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "Romance",
+                            "solution": ["Incorrect"]
+                        }
+                    ]
+                },
+                {
+                    "question": "\"And to our fans, thank you. We really feed off your energy.\"",
+                    "answers": [
+                        {
+                            "answer": "Zoey",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "Mystery",
+                            "solution": ["Correct"]
+                        },
+                        {
+                            "answer": "Romance",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "Abby",
+                            "solution": ["Incorrect"]
+                        }
+                    ]
+                },
+                {
+                    "question": "\"That's the funny thing about hope. Nobody else gets to decide if you feel it. That choice belongs to you.\"",
+                    "answers": [
+                        {
+                            "answer": "Zoey",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "Mira",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "Jinu",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "Rumi",
+                            "solution": ["Correct"]
+                        }
+                    ]
+                },
+                {
+                    "question": "\"If you're with us, prove it.\"",
+                    "answers": [
+                        {
+                            "answer": "Zoey",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "Celine",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "Mira",
+                            "solution": ["Correct"]
+                        },
+                        {
+                            "answer": "Rumi",
+                            "solution": ["Incorrect"]
+                        }
+                    ]
+                },
+                {
+                    "question": "\"Don't think you can escape what you are.\"",
+                    "answers": [
+                        {
+                            "answer": "Gwi-Ma",
+                            "solution": ["Correct"]
+                        },
+                        {
+                            "answer": "Celine",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "Mira",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "Rumi",
+                            "solution": ["Incorrect"]
+                        }
+                    ]
+                },
+                {
+                    "question": "\"I'll fight for a spa day with you.\"",
+                    "answers": [
+                        {
+                            "answer": "Mira",
+                            "solution": ["Correct"]
+                        },
+                        {
+                            "answer": "Zoey",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "Bobby",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "Rumi",
+                            "solution": ["Incorrect"]
+                        }
+                    ]
+                },
+                {
+                    "question": "\"Yes! We win this, and then we celebrate with Itaewon corn dogs!\"",
+                    "answers": [
+                        {
+                            "answer": "Mira",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "Zoey",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "Bobby",
+                            "solution": ["Correct"]
+                        },
+                        {
+                            "answer": "Rumi",
+                            "solution": ["Incorrect"]
+                        }
+                    ]
+                },
+                {
+                    "question": "\"How do you have patterns?\"",
+                    "answers": [
+                        {
+                            "answer": "Mira",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "Zoey",
+                            "solution": ["Correct"]
+                        },
+                        {
+                            "answer": "Jinu",
+                            "solution": ["Incorrect"]
+                        },
+                        {
+                            "answer": "Gwi-Ma",
+                            "solution": ["Incorrect"]
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
