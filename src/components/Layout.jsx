@@ -3,7 +3,7 @@ import { Link, Outlet } from "react-router";
 
 export default function Layout(props) {
   return <div>
-    <Navbar expand="md" className="mx-auto" bg="light" variant="light" style={{backgroundColor:"white", maxWidth: "fit-content", borderRadius: "1rem"}}>
+    <Navbar expand="sm" className="mx-auto" bg="light" variant="light" style={{backgroundColor:"white", maxWidth: "fit-content", borderRadius: "1rem"}}>
       <Container>
         {/* <Navbar.Brand as={Link} to="/">
           <img/> TODO: create home image
