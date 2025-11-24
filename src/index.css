@@ -30,6 +30,21 @@
   url("./assets/KPDH-font/hunterskpop-q29j0-webfont.woff2") format("woff2")
 }
 
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .nav ul {
+    flex-direction: column;
+    display: none; /* hidden until toggled */
+  }
+  .nav {
+    display: block; /* show hamburger icon */
+  }
+}
+
 .infoCard {
   background-color: white;
   padding: 1.5rem;
@@ -192,4 +207,33 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* Navbar toggler (hamburger) styling: purple lines and optional centered toggler */
+/* Replace Bootstrap's default SVG toggler icon with a purple SVG */
+.navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='%23a020f0' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+/* Optional: different color when the toggler (aria-expanded) is open */
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='%230070b3' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
+
+/* Utility to absolutely center the toggler inside its positioned container.
+   If you want a centered toggler that doesn't move when the collapse opens,
+   add className="navbar-toggler-center" to the Navbar.Toggle and
+   className="navbar-container" to its Container in Layout.jsx. */
+.navbar-container {
+  position: relative;
+}
+.navbar-toggler-center {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Keep collapse content centered text if desired */
+#main-nav {
+  text-align: center;
 }
