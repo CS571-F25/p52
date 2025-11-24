@@ -330,5 +330,29 @@
                 }
             ]
 
+        },
+        {
+            "title": "Ramyeon (라면)",
+            "img": {
+                "src": "../assets/vocab-pics/ramyeon.png",
+                "alt": "A picture of Huntrix eating ramyeon."
+            },
+            "content": "At the beginning of KPop Demon Hunters, we see Rumi, Mira, and Zoey eating ramyeon (라면) out of cups designed just for them. Rumi’s flavor is superstar, Mira’s flavor is spice queen, and Zoey’s flavor is hamburger. But what is ramyeon (also spelled ramyun), and what is its origins?\n\nIn the early 1900s, a Chinese dish made its way to Japan. This dish ultimately became the classic Japanese ramen (ラーメン) dish. Later, instant ramen was invented in 1958 by Taiwanese-Japanese businessman Momofuku Ando, during a time in which Japan was stricken by poverty after World War II. Instant ramen was produced quickly and cheaply by flash-frying noodles first.\n\nIn the 1960s, Korean businessman Jean Jong-Yeon discovered instant ramen during a trip to Japan. He created ramyeon, a quick and cheap option for people after the Korean war. While ramen can be fresh or instant, ramyeon is always instant.\n\nBoth ramyeon and ramen have many variations, but there are a few things that differentiate ramyeon and ramen. Ramyeon is known for its spicy broth, while ramen is known for the umami flavor of its noodles (which is caused by boiling the noodles in savory chicken or pork stock). Additionally, ramyeon ingredients are all cooked together, while ramen noodles are added to a strained broth.",
+            "sources": [
+                {
+                    "author": "Miller, Robin",
+                    "title": "The Real Difference Between Ramen And Ramyeon",
+                    "website": "Mashed",
+                    "date": "18 Mar. 2021",
+                    "link": "https://www.mashed.com/359481/the-real-difference-between-ramen-and-ramyeon/"
+                },
+                {
+                    "title": "Why Do K-Pop Demon Hunters Choose Cup Rumyun Over Restaurant Ramen?",
+                    "website": "KoreAtlas",
+                    "date": "28 Oct. 2025",
+                    "link": "https://koreatlas.com/korean-ramyeon-culture-kpop-demon-hunters/"
+                }
+            ]
+
         }
     ]
