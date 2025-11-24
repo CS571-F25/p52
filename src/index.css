@@ -20,6 +20,7 @@
   color: white;
   font-family: "KPDH";
   font-size: 4rem;
+  background-color: transparent !important;
 }
 
 @font-face {
@@ -45,7 +46,7 @@
 }
 
 .pagination .page-item.active .page-link {
-  background-color:  #ff1493 !important;
+  background-color:  #e30080 !important;
 }
 
 .pagination .page-item .page-link {
@@ -65,7 +66,7 @@
 
 /* Change the color of the active indicator */
 .carousel-indicators .active {
-  background-color: #ff1493 !important; /* Replace with your desired color */
+  background-color: #e30080 !important; /* Replace with your desired color */
 }
 
 .custom-indicators {
@@ -104,7 +105,7 @@
 }
 
 .quiz-button {
-  background-color:#ff1493;
+  background-color:#e30080;
   color: white;
   font-weight: bold;
   border-radius: 0.5rem;

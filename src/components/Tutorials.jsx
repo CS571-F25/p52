@@ -10,13 +10,13 @@ export default function Tutorials () {
     <h1 className="pageTitle">Tutorials</h1>
     <div style={{backgroundColor: "white", padding: "1.5rem", borderRadius: "1rem"}}>
     <Container>
-      <h3>Dances</h3>
+      <h2>Dances</h2>
       <p>Learn the choreography of your favorite songs!</p>
-      <button className="quiz-button" onClick={()=>{setDances(s=>!s)}} style={{backgroundColor:"#ff0080ff", marginBottom: 10}}>{dances ? "Hide Dances" : "Show Dances"}</button>
+      <button className="quiz-button" onClick={()=>{setDances(s=>!s)}} style={{marginBottom: 10}}>{dances ? "Hide Dances" : "Show Dances"}</button>
         <br/>
         {
           dances ?
-            <Card style={{border: "3px solid #ff1493", alignItems: "center"}}>
+            <Card style={{border: "3px solid #e30080", alignItems: "center"}}>
               <h4>Golden</h4>
               <iframe width="560" height="315" src="https://www.youtube.com/embed/qgojgsKgxO4?si=GsdQTaLL5xOCmsEp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
               <br/><br/>
@@ -32,13 +32,13 @@ export default function Tutorials () {
           : <></>
         }
       <br/><hr style={{border: "1px solid #7800b0ff"}}/><br/>
-      <h3>DIY</h3>
+      <h2>DIY</h2>
       <p>Learn how to make various crafts from the movie!</p>
-      <button className="quiz-button" onClick={()=>{setDiy(s=>!s)}} style={{backgroundColor:"#ff0080ff", marginBottom: 10}}>{diy ? "Hide DIY" : "Show DIY"}</button>
+      <button className="quiz-button" onClick={()=>{setDiy(s=>!s)}} style={{marginBottom: 10}}>{diy ? "Hide DIY" : "Show DIY"}</button>
         <br/>
         {
           diy ?
-            <Card style={{border: "3px solid #ff1493", alignItems: "center"}}>
+            <Card style={{border: "3px solid #e30080", alignItems: "center"}}>
               <h4>Norigae 노리개</h4>
               <div>Rumi</div>
               <iframe width="560" height="315" src="https://www.youtube.com/embed/cIIprgB2uP4?si=FVHlqyeh9bfD6tUH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
