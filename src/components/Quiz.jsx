@@ -1,5 +1,5 @@
 import {Card, Carousel} from "react-bootstrap"
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 
 // gets a quiz with a title and a list of questions
 // each question gets its own carousel
@@ -13,7 +13,7 @@ export default function Quiz(props) {
     // State to track the selected answer for each question
     const [selectedAnswers, setSelectedAnswers] = useState({});
     // track result
-    const [result, setResult] = useState("");
+    const [result, setResult] = useState("Results");
 
     // create a base array of no accuracies for each question
     const baseAccuracies = questions.map(() => "");
@@ -121,7 +121,7 @@ export default function Quiz(props) {
     return <Card className="card" >
         <h2>{props.title}</h2>
         <br/>
-        <div style={{border: "3px solid #ff1493"}}>
+        <div style={{border: "3px solid #e30080"}}>
             <Carousel
                 ref={carouselRef}
                 style={{ height: "auto"}}
@@ -135,33 +135,35 @@ export default function Quiz(props) {
                         const answers = q.answers;
 
                         return <Carousel.Item key={qIndex} style={{paddingTop:"1rem"}}>
-                            <h3>{q.question}</h3>
-                            <br/>
-                            {
-                                answers.map((a, index) => (
-                                    <div
-                                        key={index}
-                                        style={{
-                                            display: "flex",
-                                            alignItems: "center", // Aligns the radio button and text vertically
-                                            marginBottom: "1rem",
-                                            paddingLeft: "5rem"
-                                        }}
-                                    >
-                                        <input
-                                            type="radio"
-                                            id={`answer-${qIndex}-${index}`}
-                                            name={`quiz-answer-${qIndex}`}
-                                            value={a.answer}
-                                            onChange={() => handleAnswerChange(qIndex, a.answer)}
-                                            style={{ marginRight: "8px" }} // Adds spacing between the radio button and text
-                                        />
-                                        <label htmlFor={`answer-${qIndex}-${index}`} style={{ marginLeft: "4px" }}>
-                                            {a.answer}
-                                        </label>
-                                    </div>
-                                ))
-                            }
+                            <fieldset>
+                                <legend>{q.question}</legend>
+                                <br/>
+                                {
+                                    answers.map((a, index) => (
+                                        <div
+                                            key={index}
+                                            style={{
+                                                display: "flex",
+                                                alignItems: "center", // Aligns the radio button and text vertically
+                                                marginBottom: "1rem",
+                                                paddingLeft: "5rem"
+                                            }}
+                                        >
+                                            <input
+                                                type="radio"
+                                                id={`${props.title}-answer-${qIndex}-${index}`}
+                                                name={`quiz-answer-${qIndex}`}
+                                                value={a.answer}
+                                                onChange={() => handleAnswerChange(qIndex, a.answer)}
+                                                style={{ marginRight: "8px" }} // Adds spacing between the radio button and text
+                                            />
+                                            <label htmlFor={`${props.title}-answer-${qIndex}-${index}`} style={{ marginLeft: "4px" }}>
+                                                {a.answer}
+                                            </label>
+                                        </div>
+                                    ))
+                                }
+                            </fieldset>
                             <br/>
                             <button
                                 type="submit"
@@ -201,7 +203,7 @@ export default function Quiz(props) {
 
                             // reset result
                             setTimeout( () => {
-                                setResult("");
+                                setResult("Results");
                             }, 1000); // delay (in milliseconds) so the user does not see the reset
                         }} 
                         className="quiz-button"
