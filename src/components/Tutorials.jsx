@@ -16,7 +16,7 @@ export default function Tutorials () {
         <br/>
         {
           dances ?
-            <Card style={{border: "3px solid #ff1493", alignItems: "center"}}>
+            <Card style={{border: "3px solid #e30080", alignItems: "center"}}>
               <h4>Golden</h4>
               <iframe width="560" height="315" src="https://www.youtube.com/embed/qgojgsKgxO4?si=GsdQTaLL5xOCmsEp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
               <br/><br/>
@@ -38,7 +38,7 @@ export default function Tutorials () {
         <br/>
         {
           diy ?
-            <Card style={{border: "3px solid #ff1493", alignItems: "center"}}>
+            <Card style={{border: "3px solid #e30080", alignItems: "center"}}>
               <h4>Norigae 노리개</h4>
               <div>Rumi</div>
               <iframe width="560" height="315" src="https://www.youtube.com/embed/cIIprgB2uP4?si=FVHlqyeh9bfD6tUH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
