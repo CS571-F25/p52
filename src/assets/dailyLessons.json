@@ -1,7 +1,6 @@
-{
-    "lessons": [
+[
         {
-            "title": "Honmoon 혼문",
+            "title": "Honmoon (혼문)",
             "content": "Honmoon translates to “soul‑gate”. This of course refers to how the Honmoon—a barrier between the demon realm and our world—is powered: by the souls of the Huntrix’s fans. The Honmoon is a concept created for the movie but takes inspiration from Korean shamanism. Korean shamans, or mudang (무당), are said to be able to open the boundaries between realms for spirits.",
             "sources": [
                 {
@@ -28,7 +27,7 @@
             ]
         },
         {
-            "title": "Mudang 무당",
+            "title": "Mudang (무당)",
             "content": "The mudang are Korean shamans—traditionally women—who use \"[m]ovement, breath, and rhythm\" to connect with the spirit world. \"[C]reating harmony between body, sound, and spirit\" is important.\n\nThe film KPop Demon Hunters was influenced by mudang tradition. For example, the demon hunters, like the mudang, have to bring people together and can influence the boundaries between realms. Moreover, the weapons that Huntrix uses are inspired by ceremonial blades used in shamanic rituals. Finally, demon hunters also seem to be traditionally women.\n\nEven in real life, K-pop performances and shamanic rituals have been compared. \"[R]hythm, repetition, and emotional intensity\" are important to both K-pop performances and shamanic rituals. It is said that both roles require being \"born with the saju (사주), or spiritual constitution\".",
                 "sources": [
                     {
@@ -40,7 +39,7 @@
                 ]
         },
         {
-            "title": "Magwi 마귀",
+            "title": "Magwi (마귀)",
             "content": "Magwi means \"demon\", \"devil\", or \"evil spirit\" in Korean. Notice that Magwi is Gwi-Ma but with the syllables reversed. Ma itself means demon or a barrier to something someone is trying to accomplish. Gwi means ghost. So Gwi-Ma itself means \"ghost-demon\".",
                 "sources": [
                     {
@@ -60,7 +59,7 @@
                 ]
         },
         {
-            "title": "Norigae 노리개",
+            "title": "Norigae (노리개)",
             "img": {
                 "src": "../assets/vocab-pics/norigae.jpg",
                 "alt": "An up-close picture of Rumi, Mira, and Zoey's norigae. As indicated by the picture, Rumi's norigae is traditional, Mira's norigae is bold, and Zoey's norigae is fun."
@@ -110,7 +109,7 @@
                 ]
         },
         {
-            "title": "Gat 갓",
+            "title": "Gat (갓)",
             "img": {
                 "src": "../assets/vocab-pics/gat.jpg",
                 "alt": "A diagram explaining the different parts of a gat. It also depicts two different gat variations: the heukrip (흑립) and the jeollip (절립)."
@@ -200,7 +199,7 @@
         },
 
         {
-            "title": "Saingeom 사인검",
+            "title": "Saingeom (사인검)",
             "img": {
                 "src": "../assets/vocab-pics/saingeom.jpg",
                 "alt": "A picture of a real saingeom sword. It has a gray blade decorated with golden constellations."
@@ -254,6 +253,82 @@
                     "link": "https://lingopie.com/blog/k-pop-demon-hunters-traditional-korean-easter-eggs-you-probably-missed/"
                 }
             ]
+        },
+
+        {
+            "title": "Hoobae (후배) and Sunbae (선배)",
+            "img": {
+                "src": "../assets/vocab-pics/sunbae-hoobae.png",
+                "alt": "A picture of Huntrix and the Saja Boys bowing to each other in the movie's game show scene."
+            },
+            "content": "During the game show scene in KPop Demon Hunters, Rumi calls the Saja Boys her hoobaes: \"We just wanted to stop by and congratulate our hoobaes on their debut.\" What does Rumi mean by hoobae (후배)?\n\nA hoobae is someone with less experience than you, while a sunbae (선배) is someone with more experience than you. Age itself isn't the most important factor; experience level is. In the case of the K-pop industry, those who debut earlier are sunbaes and those who debut later are hoobaes. These terms can also be used to describe who entered a company or university first.\n\nHoobaes may refer to their sunbaes as \"NAME + sunbae-nim\" — or \"NAME + sunbae\" after getting on friendly terms. Additionally, as a show of respect, hoobaes bow 90 degrees to their sunbaes. Sunbaes could call their hoobaes \"NAME + hoobae-nim\" but usually one wouldn’t address someone directly as a hoobae, because hoobae is considered a lower position. Instead, one would typically use \"NAME ssi,\" \"NAME nim,\" or \"NAME + position.\"\n\nThus, the Saja Boys are Huntrix’s hoobaes and Huntrix is the Saja Boys’ sunbaes. We also see the Saja Boys bowing to Huntrix, as expected in a sunbae-hoobae dynamic.\n\nAs a side note: the correct spelling of hoobae and sunbae based on romanization rules is hubae and seonbae, but most people use hoobae and sunbae.",
+            "sources": [
+                {
+                    "author": "Seo, Minjung",
+                    "title": "Don’t Call Someone Sunbae (선배) Before Reading This!",
+                    "website": "Lingu Asia",
+                    "date": "6 Aug. 2024",
+                    "link": "https://linguasia.com/sunbae"
+                },
+                {
+                    "author": "Seo, Minjung",
+                    "title": "What Hoobae (후배) Means in Korean and How to Use it",
+                    "website": "Lingu Asia",
+                    "date": "6 Aug. 2024",
+                    "link": "https://linguasia.com/hoobae"
+                },
+                {
+                    "author": "Talk To Me In Korean",
+                    "title": "More Detailed Explanation of K-pop Demon Hunters by a Korean Teacher",
+                    "website": "YouTube",
+                    "date": "1 Aug. 2025",
+                    "link": "https://www.youtube.com/watch?v=mozwhO1jqh4&t=247s"
+                }
+            ]
+        },
+
+        {
+            "title": "Nim (님)",
+            "img": {
+                "src": "../assets/vocab-pics/nim.png",
+                "alt": "A picture of Doctor Han and the Huntrix band members greeting each other."
+            },
+            "content": "In KPop Demon Hunters, Doctor Han refers to Rumi as \"Rumi Nim.\" Nim (님) is an honorific similar to Mr./Ms. in English. So, \"Rumi Nim\" can be translated as \"Ms. Rumi.\"\n\nNim is also placed after occupations and titles. For example, the word for teacher is seonsaeng (선생), and when talking to or about a teacher, you would say seonsaengnim (선생님). If you want to specify one’s family name in addition to their title, you would place the name in front of the title: Park seonsaengnim (박 선생님) means Teacher Park. Similarly, nim can be placed after family titles. For example, the honorific family title for grandmother is halmeonim (할머님).",
+            "sources": [
+                {
+                    "author": "Armstrong, Joe",
+                    "title": "Korean Honorifics – How to Speak Respectfully in Korean",
+                    "website": "90 Day Korean",
+                    "publisher": "90 Day Languages LLC",
+                    "date": "10 Nov. 2025",
+                    "link": "https://www.90daykorean.com/korean-honorifics/"
+                },
+                {
+                    "author": "Talk To Me In Korean",
+                    "title": "More Detailed Explanation of K-pop Demon Hunters by a Korean Teacher",
+                    "website": "YouTube",
+                    "date": "1 Aug. 2025",
+                    "link": "https://www.youtube.com/watch?v=mozwhO1jqh4&t=247s"
+                }
+            ]
+
+        },
+        {
+            "title": "Gaja (가자)",
+            "img": {
+                "src": "../assets/vocab-pics/gaja.png",
+                "alt": "A picture of Huntrix entering Doctor Han's clinic. Zoey is excited and drags Rumi inside by the arm."
+            },
+            "content": "Throughout the film, \"Gaja\" is heard multiple times. Zoey says, \"Gaja, gaja, gaja, gaja!\" as Huntrix enters Doctor Han’s clinic, and Zoey and Mira both say it right before their performance at the Idol Awards.\n\nGaja (가자) means \"Let’s go!\" It is common to repeat the word multiple times — though it is usually not repeated as many as four times. Zoey’s use of the word four times when entering the clinic, however, reflects her energetic personality.",
+            "sources": [
+                {
+                    "author": "Talk To Me In Korean",
+                    "title": "More Detailed Explanation of K-pop Demon Hunters by a Korean Teacher",
+                    "website": "YouTube",
+                    "date": "1 Aug. 2025",
+                    "link": "https://www.youtube.com/watch?v=mozwhO1jqh4&t=247s"
+                }
+            ]
+
         }
     ]
-}

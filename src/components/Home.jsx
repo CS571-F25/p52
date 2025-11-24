@@ -8,14 +8,16 @@ import lessons from "../assets/dailyLessons.json"
 import Source from "./Source.jsx";
 import footerImage from "../assets/KPDH-Footer.png";
 
+const imageMap = import.meta.glob('../assets/vocab-pics/*', {eager: true, query: 'url'});
+
 export default function Home (props) {
 
     // new day, new lesson
     const d = new Date();
     let day = d.getDate(); // returns 1 to 31
-    let index = day % lessons.lessons.length;
+    let index = day % lessons.length;
 
-    let dailyLesson = lessons.lessons[index];
+    let dailyLesson = lessons[index];
     let sources = dailyLesson.sources;
 
     // controls whether the daily lesson sources are shown; controlled by a button
@@ -25,7 +27,7 @@ export default function Home (props) {
     let src = "";
 
     if (dailyLesson.img) {
-        src = new URL(dailyLesson.img.src, import.meta.url).href;
+        src = imageMap[dailyLesson.img.src].default;
     }
 
     return <div>
