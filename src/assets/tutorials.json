@@ -1,0 +1,51 @@
+[
+    {
+        "title": "Dances",
+        "description": "Learn the choreography of your favorite songs!",
+        "videos": [
+            {
+                "title": "Golden",
+                "url": "https://www.youtube.com/embed/qgojgsKgxO4?si=GsdQTaLL5xOCmsEp"
+            },
+            {
+                "title": "Soda Pop",
+                "url": "https://www.youtube.com/embed/adeRPcoYJRI?si=o-gBhwv2dypBw8WI"
+            },
+            {
+                "title": "Your Idol",
+                "url": "https://www.youtube.com/embed/PipEqZguT7I?si=JPD_QBinyR23IKct"
+            },
+            {
+                "title": "Takedown",
+                "url": "https://www.youtube.com/embed/dqLuEgLeBPw?si=OpzUJHlyMGNong6u"
+            }
+        ]
+    },
+    {
+        "title": "DIY",
+        "description": "Learn how to make various crafts from the movie!",
+        "videos": [
+            {
+                "title": "Norigae 노리개",
+                "urls": [
+                    {
+                        "subtitle": "Rumi",
+                        "url": "https://www.youtube.com/embed/cIIprgB2uP4?si=FVHlqyeh9bfD6tUH"
+                    },
+                    {
+                        "subtitle": "Mira",
+                        "url": "https://www.youtube.com/embed/EkdG48W5RsA?si=Wmz1Jh5xJks8Fsws"
+                    },
+                    {
+                        "subtitle": "Zoey",
+                        "url": "https://www.youtube.com/embed/7QTVLYQKyIY?si=eNvrEZTgNkKGvYYF"
+                    }
+                ]
+            },
+            {
+                "title": "Maedeup 매듭 Bracelet (Jinu's Bracelet)",
+                "url": "https://www.youtube.com/embed/YPtUIqpQ9ew?si=oLedYw-gMYdGEvbl"
+            }
+        ]
+    }
+]
