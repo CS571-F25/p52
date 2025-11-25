@@ -1,5 +1,5 @@
 import {useState} from "react";
-import {Card, Button, Container, Row, Col} from "react-bootstrap";
+import {Card, Container, Row, Col} from "react-bootstrap";
 import discordQR from "../assets/QR Codes/discordQR.png";
 import formQR from "../assets/QR Codes/formQR.png";
 import mailingQR from "../assets/QR Codes/mailingQR.png";

@@ -1,5 +1,4 @@
-import { useState, useRef, useEffect } from "react";
-import {Card, Button, Container, Row, Col} from "react-bootstrap";
+import {Container} from "react-bootstrap";
 import TutorialCategory from "./TutorialCategory.jsx";
 import tutorials from "../assets/tutorials.json";
 
