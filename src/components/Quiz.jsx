@@ -138,31 +138,40 @@ export default function Quiz(props) {
                             <fieldset>
                                 <legend>{q.question}</legend>
                                 <br/>
-                                {
-                                    answers.map((a, index) => (
-                                        <div
-                                            key={index}
-                                            style={{
-                                                display: "flex",
-                                                alignItems: "center", // Aligns the radio button and text vertically
-                                                marginBottom: "1rem",
-                                                paddingLeft: "5rem"
-                                            }}
-                                        >
-                                            <input
-                                                type="radio"
-                                                id={`${props.title}-answer-${qIndex}-${index}`}
-                                                name={`quiz-answer-${qIndex}`}
-                                                value={a.answer}
-                                                onChange={() => handleAnswerChange(qIndex, a.answer)}
-                                                style={{ marginRight: "8px" }} // Adds spacing between the radio button and text
-                                            />
-                                            <label htmlFor={`${props.title}-answer-${qIndex}-${index}`} style={{ marginLeft: "4px" }}>
-                                                {a.answer}
-                                            </label>
-                                        </div>
-                                    ))
-                                }
+                                <div
+                                    style={{
+                                        display: "flex",
+                                        justifyContent: "center", // Center the entire div
+                                        height: "100%", // Ensure it takes up the full height of the carousel item
+                                    }}
+                                >
+                                    <div
+                                        style={{
+                                            display: "flex",
+                                            flexDirection: "column", // Stack radio buttons vertically
+                                            alignItems: "flex-start", // Align items to the left
+                                            textAlign: "left", // Align text to the left
+                                        }}
+                                    >
+                                    {
+                                        answers.map((a, index) => (
+                                            <div key={index}> {/* Align radio button and label */}
+                                                <input
+                                                    type="radio"
+                                                    id={`${props.title}-answer-${qIndex}-${index}`}
+                                                    name={`quiz-answer-${qIndex}`}
+                                                    value={a.answer}
+                                                    onChange={() => handleAnswerChange(qIndex, a.answer)}
+                                                    style={{ marginRight: "8px" }} // Adds spacing between the radio button and text
+                                                />
+                                                <label htmlFor={`${props.title}-answer-${qIndex}-${index}`} style={{ marginLeft: "4px" }}>
+                                                    {a.answer}
+                                                </label>
+                                            </div>
+                                        ))
+                                    }
+                                    </div>
+                                </div>
                             </fieldset>
                             <br/>
                             <button
