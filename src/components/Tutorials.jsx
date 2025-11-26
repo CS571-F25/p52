@@ -11,8 +11,8 @@ export default function Tutorials () {
       <br/><hr style={{border: "1px solid #7800b0ff"}}/><br/>
       {
         tutorials.map(t => {
-          return <div>
-            <TutorialCategory key={t.title} {...t}/>
+          return <div key={t.title}>
+            <TutorialCategory {...t}/>
             <br/><hr style={{border: "1px solid #7800b0ff"}}/><br/>
           </div>
         })
