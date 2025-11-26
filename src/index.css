@@ -119,11 +119,14 @@
   margin-bottom: 16px;
 }
 
-.quiz-button {
+.pink-button {
   background-color:#e30080;
   color: white;
   font-weight: bold;
   border-radius: 0.5rem;
+}
+.pink-button:hover {
+  background-color:#cf0075;
 }
 .purple-button {
   background-color:rgb(28, 6, 102);

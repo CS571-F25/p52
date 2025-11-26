@@ -9,7 +9,7 @@ export default function TutorialCategory(props) {
     return <div>
         <h2>{props.title}</h2>
         <p>{props.description}</p>
-        <button className="quiz-button" onClick={()=>{setShow(s=>!s)}} style={{marginBottom: 10}}>{show ? `Hide ${props.title}` : `Show ${props.title}`}</button>
+        <button className="pink-button" onClick={()=>{setShow(s=>!s)}} style={{marginBottom: 10}}>{show ? `Hide ${props.title}` : `Show ${props.title}`}</button>
         <br/>
         {
           show ?
