@@ -1,11 +1,13 @@
 import {useState} from "react";
 import {Card, Container, Row, Col} from "react-bootstrap";
+import splitEmTags from "../helper-functions/splitEmTags.jsx";
 import discordQR from "../assets/QR Codes/discordQR.png";
 import formQR from "../assets/QR Codes/formQR.png";
 import mailingQR from "../assets/QR Codes/mailingQR.png";
 import availabilityQR from "../assets/QR Codes/availabilityQR.png";
 import lessons from "../assets/dailyLessons.json"
 import Source from "./Source.jsx";
+import QRCode from "./QRCode.jsx";
 import footerImage from "../assets/KPDH-Footer.png";
 
 const imageMap = import.meta.glob('../assets/vocab-pics/*', {eager: true, query: 'url'});
@@ -44,39 +46,36 @@ export default function Home (props) {
             <Container>
                 <Row>
                     <Col sm={12} md={6}>
-                        <div>
-                            <h3>Club Interest form</h3>
-                            <p>What activities are you interested in?</p>
-                            <img src={formQR} alt="QR Code for Club Interest Form" style={{ width: "20%", height: "auto" }}></img>
-                            <br/>
-                            <a href="https://tinyurl.com/kdhclubform">https://tinyurl.com/kdhclubform</a>
-                        </div>
+                        <QRCode
+                            title="Club Interest form"
+                            lines={["What activities are you interested in?"]}
+                            Qr={formQR} QRalt="QR Code for Club Interest Form" imgWidth="20%"
+                            link="https://tinyurl.com/kdhclubform"
+                        />
                         <br/>
-                        <div>
-                            <h3>Club Discord</h3>
-                            <p>Discuss everything KPDH with other fans!<br/>We share updates and events here.</p>
-                            <img src={discordQR} alt="QR Code for Discord Join Link" style={{ width: "22%", height: "auto" }}></img>
-                            <br/>
-                            <a href="https://discord.gg/HHbv3AZNSY">https://discord.gg/HHbv3AZNSY</a>
-                        </div>
+                        <QRCode
+                            title="Club Discord"
+                            lines={["Discuss everything KPDH with other fans!", "We share updates and events here."]}
+                            Qr={discordQR} QRalt="QR Code for Discord Join Link" imgWidth="20%"
+                            link="https://discord.gg/HHbv3AZNSY"
+                        />
                         <br/>
                     </Col>
                     <Col sm={12} md={6}>
-                        <div>
-                            <h3>Availability Form</h3>
-                            <p>What meeting times work best for you?</p>
-                            <img src={availabilityQR} alt="QR Code for Availability Form" style={{ width: "22%", height: "auto" }}></img>
-                            <br/>
-                            <a href="https://www.when2meet.com/?32132278-2l8BM">https://www.when2meet.com/?32132278-2l8BM</a>
-                        </div>
+                        <QRCode
+                            title="Availability Form"
+                            lines={["What meeting times work best for you?"]}
+                            Qr={availabilityQR} QRalt="QR Code for Availability Form" imgWidth="20%"
+                            link="https://www.when2meet.com/?32132278-2l8BM"
+                        />
                         <br/>
-                        <div>
-                            <h3>Club Mailing List</h3>
-                            <p>An invite link to the Outlook Mailing Group.<br/>We share updates and events here.</p>
-                            <img src={mailingQR} alt="QR Code for Mailing List" style={{ width: "20%", height: "auto" }}></img>
-                            <br/>
-                            <a href="https://tinyurl.com/join-kdh-club-mailing">https://tinyurl.com/join-kdh-club-mailing</a>
-                        </div>
+                        <QRCode
+                            title="Club Mailing List"
+                            lines={["An invite link to the Outlook Mailing Group.", "We share updates and events here."]}
+                            Qr={mailingQR} QRalt="QR Code for Mailing List" imgWidth="20%"
+                            link="https://tinyurl.com/join-kdh-club-mailing"
+                        />
+                        <br/>
                     </Col>
                 </Row>
             </Container>
@@ -93,7 +92,8 @@ export default function Home (props) {
                 <br/>
 
                 {/* This styling will allow \n to be recognized. Inspired by: https://stackoverflow.com/questions/42547885/how-to-recognize-new-line-character-n-in-html*/}
-                <p style={{whiteSpace: "pre-wrap", textAlign: "left"}}>{dailyLesson.content}</p>
+                {/* There may be italics within the content. We use splitEmTags() to handle <em> tags in the content */}
+                <p style={{whiteSpace: "pre-wrap", textAlign: "left"}}>{splitEmTags(dailyLesson.content)}</p>
 
                 <br/>
                 <button className="purple-button" onClick={()=>{setShowSources(s=>!s)}}>{showSources ? "Hide " : "Show "}Sources</button>
