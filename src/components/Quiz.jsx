@@ -121,7 +121,7 @@ export default function Quiz(props) {
     return <Card className="card" >
         <h2>{props.title}</h2>
         <br/>
-        <div style={{border: "3px solid #e30080"}}>
+        <div className="pinkBorder">
             <Carousel
                 ref={carouselRef}
                 style={{ height: "auto"}}

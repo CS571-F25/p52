@@ -14,6 +14,15 @@
 
   max-width: "100%";
 
+  --pink-color: #e30080;
+  --faded-pink-color: #ff69b4;
+  --dark-pink-color: #cf0075;
+  --purple-color: rgb(28, 6, 102);
+  --dark-purple-color: rgb(1, 3, 80);
+}
+
+.pinkBorder {
+  border: 3px solid var(--pink-color) !important;
 }
 
 .pageTitle {
@@ -56,17 +65,17 @@
 }
 
 .pagination {
-  border-color:#0e0066 !important;
+  border-color:var(--purple-color) !important;
   border-width: 1rem !important;
 }
 
 .pagination .page-item.active .page-link {
-  background-color:  #e30080 !important;
+  background-color:  var(--pink-color) !important;
 }
 
 .pagination .page-item .page-link {
   font-weight: bold !important;
-  border-color:#0e0066 !important;
+  border-color:var(--purple-color) !important;
 }
 
 /* Make carousel be non-scrollable using the indicators at the bottom */
@@ -76,12 +85,12 @@
 
 /* Change the color of the indicators */
 .carousel-indicators [data-bs-target] {
-  background-color: #ff69b4 !important; /* Replace with your desired color */
+  background-color: var(--faded-pink-color) !important; /* Replace with your desired color */
 }
 
 /* Change the color of the active indicator */
 .carousel-indicators .active {
-  background-color: #e30080 !important; /* Replace with your desired color */
+  background-color: var(--pink-color) !important; /* Replace with your desired color */
 }
 
 .custom-indicators {
@@ -101,7 +110,7 @@
 
 /* Default (unanswered) */
 .custom-indicators .indicator.unanswered {
-  background-color: #0e0066;
+  background-color: var(--purple-color);
 }
 
 /* Correct answer */
@@ -119,24 +128,28 @@
   margin-bottom: 16px;
 }
 
+input[type="radio"]:checked {
+    accent-color: var(--pink-color);
+}
+
 .pink-button {
-  background-color:#e30080;
+  background-color:var(--pink-color);
   color: white;
   font-weight: bold;
   border-radius: 0.5rem;
 }
 .pink-button:hover {
-  background-color:#cf0075;
+  background-color:var(--dark-pink-color);
 }
 .purple-button {
-  background-color:rgb(28, 6, 102);
+  background-color:var(--purple-color);
   color: white;
   border-radius: 1rem;
   border-width: 0.3rem;
 }
 .purple-button:hover {
-  background-color: rgb(1, 3, 80);
-  border-color: rgb(1, 3, 80);
+  background-color: var(--dark-purple-color);
+  border-color: var(--dark-purple-color);
 }
 
 h2 {
