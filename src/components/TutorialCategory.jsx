@@ -13,7 +13,7 @@ export default function TutorialCategory(props) {
         <br/>
         {
           show ?
-            <Card style={{border: "3px solid #e30080", alignItems: "center"}}>
+            <Card className="pinkBorder" style={{alignItems: "center"}}>
                 {
                 props.videos.map((video) => {
                     // given one video per title

@@ -83,7 +83,7 @@ export default function Home (props) {
             <br/>
             {/* Daily Lesson */}
             <h2>Lesson of the Day</h2>
-            <Card style={{border: "3px solid #e30080"}}>
+            <Card className="pinkBorder">
 
                 <h3>{dailyLesson.title}</h3>
                 {

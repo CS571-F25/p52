@@ -65,13 +65,13 @@
             "categories": ["Singing"]
         },
         {
-            "upcoming": true,
+            "upcoming": false,
             "name": "Korean Lyrics",
             "description": "Learn how to sing the Korean lyrics in KPDH songs.",
             "date": "TBD",
             "time": "TBD",
             "location": "TBD",
-            "categories": ["Singing"]
+            "categories": ["Singing", "Culture"]
         },
         {
             "upcoming": false,
