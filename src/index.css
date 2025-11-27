@@ -31,6 +31,11 @@
   font-size: 4rem;
   background-color: transparent !important;
 }
+@media (max-width: 400px) {
+  .pageTitle {
+    font-size: 2.5rem;   /* smaller on phones */
+  }
+}
 
 @font-face {
   font-family: 'KPDH';
@@ -58,10 +63,6 @@
   background-color: white;
   padding: 1.5rem;
   border-radius: 1rem;
-}
-
-.nav-link {
-  font-weight: bold !important;
 }
 
 .pagination {
@@ -168,9 +169,29 @@ a {
   font-weight: 500 !important;
   color: rgb(140, 41, 154) !important;
   text-decoration: inherit;
+
+  /* allow long links to wrap anywhere when necessary */
+  /* modern, best behavior: allow breaks at arbitrary points but prefer natural break points */
+  overflow-wrap: anywhere;
+  /* fallback/compat: allow breaking inside words if needed */
+  word-break: break-word;
+  /* older names for compatibility */
+  word-wrap: break-word;
+  /* ensure links are allowed to wrap (not forced on single line) */
+  white-space: normal;
 }
 a:hover {
   color: rgb(191, 57, 209) !important;
+}
+.nav-link {
+
+  font-weight: bold !important;
+
+  /* don't allow breaking in nav links except at spaces*/
+  overflow-wrap: normal;
+  word-break: normal;
+  word-wrap: normal;
+  white-space: normal;
 }
 
 body {
