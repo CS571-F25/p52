@@ -39,7 +39,7 @@ export default function EventCard(props) {
                 !props.upcoming && <br />
             }
         </div>
-        {!props.upcoming && (
+        {!props.upcoming && props.slideshow && (
             <>
                 <button onClick={() => setShowIframe(!showIframe)} className="pink-button" style={{ marginBottom: "10px" }}>
                     {showIframe ? "Hide Slideshow" : "Show Slideshow"}
