@@ -128,6 +128,7 @@ export default function Quiz(props) {
                 controls={false}
                 interval={null}
                 id={props.title}
+                touch={false} // Disable swipe gestures
             >
                 {
                     questions.map((q, qIndex) => {
