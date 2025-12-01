@@ -43,7 +43,7 @@ export default function EventCard(props) {
                     {showIframe ? "Hide Slideshow" : "Show Slideshow"}
                 </button>
                 {showIframe && (
-                    <div style={{ width: "100%", height: `${iframeHeight}px` /* Dynamically set height*/ }}>
+                    <div style={{ marginTop: 10, width: "100%", height: `${iframeHeight}px` /* Dynamically set height*/ }}>
                         <iframe src={props.slideshow}
                             style={{
                                 width: "100%",
