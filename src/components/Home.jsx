@@ -96,7 +96,7 @@ export default function Home (props) {
                 <p style={{whiteSpace: "pre-wrap", textAlign: "left"}}>{splitEmTags(dailyLesson.content)}</p>
 
                 <br/>
-                <button className="pink-button" onClick={()=>{setShowSources(s=>!s)}}>{showSources ? "Hide " : "Show "}Sources</button>
+                <button className="purple-button" onClick={()=>{setShowSources(s=>!s)}}>{showSources ? "Hide " : "Show "}Sources</button>
                 <br/>
                 {
                     showSources ?

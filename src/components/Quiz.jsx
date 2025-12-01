@@ -121,18 +121,14 @@ export default function Quiz(props) {
     return <Card className="card" >
         <h2>{props.title}</h2>
         <br/>
-        <div className="pinkBorder"
-            onTouchStart={(e) => e.preventDefault()} // Disable touch gestures
-            onTouchMove={(e) => e.preventDefault()} // Disable touch gestures
-        >
+        <div className="pinkBorder">
             <Carousel
                 ref={carouselRef}
                 style={{ height: "auto"}}
                 controls={false}
                 interval={null}
                 id={props.title}
-                onTouchStart={(e) => e.preventDefault()} // Disable touch gestures
-                onTouchMove={(e) => e.preventDefault()} // Disable touch gestures
+                touch={false} // Disable swipe gestures
             >
                 {
                     questions.map((q, qIndex) => {
