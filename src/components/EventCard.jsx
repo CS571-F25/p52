@@ -36,13 +36,10 @@ export default function EventCard(props) {
             <p><strong>Date: </strong>{props.date}</p>
             <p><strong>Time: </strong>{props.time}</p>
             <p><strong>Location: </strong>{props.location}</p>
-            {
-                !props.upcoming && <br />
-            }
         </div>
         {!props.upcoming && props.slideshow && (
             <>
-                <button onClick={() => setShowIframe(!showIframe)} className="pink-button" style={{ marginBottom: "10px" }}>
+                <button onClick={() => setShowIframe(!showIframe)} className="pink-button">
                     {showIframe ? "Hide Slideshow" : "Show Slideshow"}
                 </button>
                 {showIframe && (
@@ -57,5 +54,8 @@ export default function EventCard(props) {
                 )}
             </>
         )}
+        {!props.upcoming && !props.slideshow &&
+            <p style={{marginBottom:0}}><em>No slideshow attached.</em></p>
+        }
     </Card>;
 }
