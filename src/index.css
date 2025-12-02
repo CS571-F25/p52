@@ -165,6 +165,18 @@ h3 {
   color: "blue";
 }
 
+/* Prevent breaking inside CJK (Hangul, Han, etc.) and inside words; prefer breaking at spaces */
+.no-break-cjk {
+  /* Don't break inside words or CJK text */
+  word-break: keep-all;
+  /* Prevent breaking inside long words where possible */
+  overflow-wrap: normal;
+  /* Ensure normal wrapping behavior (allow breaks at spaces) */
+  white-space: normal;
+  /* compatibility */
+  word-wrap: normal;
+}
+
 a {
   font-weight: 500 !important;
   color: rgb(140, 41, 154) !important;

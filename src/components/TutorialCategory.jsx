@@ -19,7 +19,7 @@ export default function TutorialCategory(props) {
                     // given one video per title
                     if (video.url) {
                         return <div key={video.title} style={{width: "100%", height: "100%"}}>
-                            <h3>{video.title}</h3>
+                            <h3 className="no-break-cjk">{video.title}</h3>
                             <Video src={video.url}/>
                             <br/><br/>
                         </div>
@@ -27,7 +27,7 @@ export default function TutorialCategory(props) {
                     // given multiple videos per title
                     if (video.urls) {
                         return <div style={{width: "100%", height: "100%"}}>
-                            <h3>{video.title}</h3>
+                            <h3 className="no-break-cjk">{video.title}</h3>
                             {
                                 video.urls.map((url) => {
                                     return <div key={url.subtitle} style={{width: "100%", height: "100%"}}>
