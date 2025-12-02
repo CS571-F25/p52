@@ -1,4 +1,5 @@
 import {Link} from "react-router";
+import Demons from "../assets/demons.png";
 
 export default function ErrorPage(props) {
 
@@ -11,6 +12,8 @@ export default function ErrorPage(props) {
             Uh oh! Demons are trying to stop you from sealing the Honmoon.
             <br/><br/>
             Quick, return <Link to="/">home</Link>.
+            <img src={Demons} alt="A group of demons trying to block your path." style={{maxWidth: "100%", marginTop: "20px"}}/>
         </div>
+
     </div>
 }
