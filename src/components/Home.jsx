@@ -85,7 +85,7 @@ export default function Home (props) {
             <h2>Lesson of the Day</h2>
             <Card className="pinkBorder">
 
-                <h3>{dailyLesson.title}</h3>
+                <h3 className="no-break-cjk">{dailyLesson.title}</h3>
                 {
                     dailyLesson.img == null ? <></> :<img src={src} alt={dailyLesson.img.alt} style={{ maxWidth: "100%", height: "auto" }} />
                 }

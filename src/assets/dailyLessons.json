@@ -1,6 +1,10 @@
 [
         {
             "title": "Honmoon (혼문)",
+            "img": {
+                "src": "../assets/vocab-pics/honmoon.png",
+                "alt": "A picture of the honmoon glowing blue."
+            },
             "content": "Honmoon translates to “soul‑gate”. This of course refers to how the Honmoon—a barrier between the demon realm and our world—is powered: by the souls of the Huntrix’s fans. The Honmoon is a concept created for the movie but takes inspiration from Korean shamanism. Korean shamans, or mudang (무당), are said to be able to open the boundaries between realms for spirits.",
             "sources": [
                 {
@@ -28,6 +32,10 @@
         },
         {
             "title": "Mudang (무당)",
+            "img": {
+                "src": "../assets/vocab-pics/mudang.png",
+                "alt": "A picture of the first demon hunters in KPop Demon Hunters."
+            },
             "content": "The mudang are Korean shamans—traditionally women—who use \"[m]ovement, breath, and rhythm\" to connect with the spirit world. \"[C]reating harmony between body, sound, and spirit\" is important.\n\nThe film <em>KPop Demon Hunters</em> was influenced by mudang tradition. For example, the demon hunters, like the mudang, have to bring people together and can influence the boundaries between realms. Moreover, the weapons that Huntrix uses are inspired by ceremonial blades used in shamanic rituals. Finally, demon hunters also seem to be traditionally women.\n\nEven in real life, K-pop performances and shamanic rituals have been compared. \"[R]hythm, repetition, and emotional intensity\" are important to both K-pop performances and shamanic rituals. It is said that both roles require being \"born with the saju (사주), or spiritual constitution\".",
                 "sources": [
                     {
@@ -40,6 +48,10 @@
         },
         {
             "title": "Magwi (마귀)",
+            "img": {
+                "src": "../assets/vocab-pics/magwi.png",
+                "alt": "A picture of Gwi-Ma receiving stolen souls."
+            },
             "content": "Magwi means \"demon\", \"devil\", or \"evil spirit\" in Korean. Notice that Magwi is Gwi-Ma but with the syllables reversed. Ma itself means demon or a barrier to something someone is trying to accomplish. Gwi means ghost. So Gwi-Ma itself means \"ghost-demon\".",
                 "sources": [
                     {
