@@ -85,6 +85,96 @@
         },
         {
             "upcoming": false,
+            "name": "Norigae Craft",
+            "description": "Create your own personal norigae inspired by the one that Zoey wears in <em>How It's Done</em>.",
+            "date": "Sat, Aug 23, 2025",
+            "time": "2:00 PM",
+            "location": "TBD",
+            "categories": ["DIY"]
+        },
+        {
+            "upcoming": true,
+            "name": "KPop Fan Shirt",
+            "description": "Create your own Huntrix or Saja Boy fan shirt. Bring a shirt to screenprint. We'll bring the screenprinting materials.",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["DIY"]
+        },
+        {
+            "upcoming": true,
+            "name": "Demon Patterns",
+            "description": "Learn how to apply facepaint to create your own demon patterns. Leave ready to break the Honmoon.",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["DIY"]
+        },
+        {
+            "upcoming": true,
+            "name": "Derpy and Sussie Painting",
+            "description": "Create a painting featuring Derpy and Sussie inspired by the Minhwa / Jakho-do painting tradition.",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["DIY"]
+        },
+        {
+            "upcoming": true,
+            "name": "<em>Golden</em> Painting",
+            "description": "Create the backdrop for <em>Golden</em> inspired by the Irworobongdo painting tradition.",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["DIY"]
+        },
+        {
+            "upcoming": true,
+            "name": "Clay Creations",
+            "description": "Come to learn how to create Derpy out of clay or to make your own creation among friends.",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["DIY"]
+        },
+        {
+            "upcoming": true,
+            "name": "Keychain Creations",
+            "description": "Follow our <em>KPop Demon Hunters</em>-inspired keychain tutorial or make your own creation among friends.",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["DIY"]
+        },
+        {
+            "upcoming": true,
+            "name": "Card Creations",
+            "description": "Learn how to make the cards that Rumi and Jinu exchange or make your own creation among friends.",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["DIY"]
+        },
+        {
+            "upcoming": true,
+            "name": "Sewing Creations",
+            "description": "Learn how to make your own demon/hunter plush or make your own creation among friends.",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["DIY"]
+        },
+        {
+            "upcoming": true,
+            "name": "Ramyeon Cups",
+            "description": "Create Rumi's, Zoey's, or Mira's ramyeon cup! Come early to get your preferred cup. If supplies are plentiful, you may be able to make more than one. (Food not included.)",
+            "date": "TBD",
+            "time": "TBD",
+            "location": "TBD",
+            "categories": ["DIY"]
+        },
+        {
+            "upcoming": false,
             "name": "Light Stick Craft",
             "description": "Show off your favorite band by creating their light sticks!",
             "date": "Sat, Aug 23, 2025",
@@ -104,7 +194,7 @@
         },
         {
             "upcoming": true,
-            "name": "Korean Cuisine",
+            "name": "Korean Cuisine: Hotteok",
             "description": "Learn about and create Korean cuisine.",
             "date": "TBD",
             "time": "TBD",
