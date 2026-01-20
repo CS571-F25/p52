@@ -5,7 +5,34 @@ import { useState } from "react";
 
 export default function GetEvents(props) {
     // get upcoming events
-    const eventList = events.events.filter((e) => props.isUpcoming ? e.upcoming : !e.upcoming);
+    const eventList = events.events.filter((e) => {
+        const now = new Date();
+        let eventStart = new Date(`${e.date} ${e.startTime}`);
+        let eventEnd = new Date(`${e.date} ${e.endTime}`);
+
+        if (e.date === "TBD") {
+            return props.isUpcoming;
+        }
+        if (e.startTime === "TBD" || e.endTime === "TBD") {
+            eventStart = new Date(`${e.date}`);
+            eventEnd = new Date(`${e.date}`);
+            // Reset time to midnight for date-only comparison
+            now.setHours(0, 0, 0, 0);
+        }
+        
+        // Event hasn't started yet (upcoming)
+        if (now < eventStart) {
+            return props.isUpcoming;
+        }
+        // Event is currently happening (ongoing)
+        else if (now >= eventStart && now <= eventEnd) {
+            return props.isUpcoming;
+        }
+        // Event has ended (past)
+        else {
+            return !props.isUpcoming;
+        }
+    });
 
     const [type, setType] = useState("All");
 
@@ -22,12 +49,12 @@ export default function GetEvents(props) {
         if (a.date === "TBD") return 1; // Place a after b
         
         // Handle "TBD" times
-        if (b.time === "TBD" && a.time === "TBD") {
+        if (b.startTime === "TBD" && a.startTime === "TBD") {
             const dateA = new Date(`${a.date}`);
             const dateB = new Date(`${b.date}`);
             return swap*(dateA - dateB);  // Ascending order (if is upcoming)
         }
-        else if (b.time === "TBD") {
+        else if (b.startTime === "TBD") {
             const dateA = new Date(`${a.date}`);
             const dateB = new Date(`${b.date}`);
             
@@ -39,7 +66,7 @@ export default function GetEvents(props) {
                 return swap*(dateA - dateB); // Ascending order (if is upcoming)
             }
         }
-        else if (a.time === "TBD") {
+        else if (a.startTime === "TBD") {
             const dateA = new Date(`${a.date}`);
             const dateB = new Date(`${b.date}`);
             
@@ -53,8 +80,8 @@ export default function GetEvents(props) {
         }
         // have both time and date
         else {
-            const dateA = new Date(`${a.date} ${a.time}`);
-            const dateB = new Date(`${b.date} ${b.time}`);
+            const dateA = new Date(`${a.date} ${a.startTime}`);
+            const dateB = new Date(`${b.date} ${b.startTime}`);
             return swap*(dateA - dateB); // Ascending order (if is upcoming)
         }
     });
@@ -141,13 +168,13 @@ function displayEvents(keptEvents, isUpcoming, categoryColors) {
     {
         return keptEvents.map((e) => {
             return <Col key={e.name} xs={12} sm={12} md={6} lg={4} xl={3} style={{ marginBottom: "16px" }}>
-                <EventCard {...e} categoryColors={categoryColors} ></EventCard>
+                <EventCard {...e} isUpcoming = {isUpcoming} categoryColors={categoryColors} ></EventCard>
             </Col>
         });
     }
     else {
         return keptEvents.map((e) => {
-            return <EventCard key={e.name} xs={12} sm={12} md={6} lg={4} xl={3} {...e} categoryColors={categoryColors}></EventCard>
+            return <EventCard key={e.name} isUpcoming = {isUpcoming} xs={12} sm={12} md={6} lg={4} xl={3} {...e} categoryColors={categoryColors}></EventCard>
         });
     }
 }

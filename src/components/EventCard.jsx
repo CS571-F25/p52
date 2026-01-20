@@ -18,7 +18,7 @@ export default function EventCard(props) {
     const renderDescription = splitEmTags(props.description);
 
     return <Card className={"card"} style={{ width: "100%", height: "100%" }}>
-        {props.upcoming && (
+        {props.isUpcoming && (
             <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", justifyContent: "center", marginBottom: "16px" }}>
                 {props.categories.map((c) => (
                     <div key={c} style={{ padding: "4px 8px", border: `2px solid ${props.categoryColors.get(c)}`, borderRadius: "4px" }}>
@@ -31,13 +31,18 @@ export default function EventCard(props) {
             <h2>{renderName}</h2>
             <p>{renderDescription}</p>
             {
-                props.upcoming && <br />
+                props.isUpcoming && <br />
             }
             <p><strong>Date: </strong>{props.date}</p>
-            <p><strong>Time: </strong>{props.time}</p>
+            <p><strong>Time: </strong>
+                {
+                    props.startTime === "TBD" || props.endTime === "TBD"  ? "TBD"
+                    : `${props.startTime} - ${props.endTime}`
+                }
+            </p>
             <p><strong>Location: </strong>{props.location}</p>
         </div>
-        {!props.upcoming && props.slideshow && (
+        {!props.isUpcoming && props.slideshow && (
             <>
                 <button onClick={() => setShowIframe(!showIframe)} className="pink-button">
                     {showIframe ? "Hide Slideshow" : "Show Slideshow"}
@@ -54,7 +59,7 @@ export default function EventCard(props) {
                 )}
             </>
         )}
-        {!props.upcoming && !props.slideshow &&
+        {!props.isUpcoming && !props.slideshow &&
             <p style={{marginBottom:0}}><em>No slideshow attached.</em></p>
         }
     </Card>;
