@@ -4,14 +4,14 @@ import { Container, Row, Col, Pagination } from "react-bootstrap";
 import { useState } from "react";
 
 export default function GetEvents(props) {
-    // get upcoming events
-    const eventList = events.events.filter((e) => {
+    // get upcoming events and mark currently happening ones
+    const eventList = events.events.map((e) => {
         const now = new Date();
         let eventStart = new Date(`${e.date} ${e.startTime}`);
         let eventEnd = new Date(`${e.date} ${e.endTime}`);
 
         if (e.date === "TBD") {
-            return props.isUpcoming;
+            return { ...e, "type" : "upcoming" };
         }
         if (e.startTime === "TBD" || e.endTime === "TBD") {
             eventStart = new Date(`${e.date}`);
@@ -22,10 +22,19 @@ export default function GetEvents(props) {
         
         // Event hasn't started yet (upcoming)
         if (now < eventStart) {
-            return props.isUpcoming;
+            return { ...e, "type" : "upcoming" };
         }
         // Event is currently happening (ongoing)
         else if (now >= eventStart && now <= eventEnd) {
+            return { ...e, "type" : "ongoing" };
+        }
+        // Event has ended (past)
+        else {
+            return { ...e, "type" : "past" };
+        }
+    }).filter((e) => {
+        // Event hasn't started yet (upcoming) or is currently happening (ongoing)
+        if (e.type === "upcoming" || e.type === "ongoing") {
             return props.isUpcoming;
         }
         // Event has ended (past)

@@ -17,7 +17,7 @@ export default function EventCard(props) {
     const renderName = splitEmTags(props.name);
     const renderDescription = splitEmTags(props.description);
 
-    return <Card className={"card"} style={{ width: "100%", height: "100%" }}>
+    return <Card className={props.type === "ongoing" ? "card card-glow-blue" : "card"} style={{ width: "100%", height: "100%" }}>
         {props.isUpcoming && (
             <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", justifyContent: "center", marginBottom: "16px" }}>
                 {props.categories.map((c) => (
