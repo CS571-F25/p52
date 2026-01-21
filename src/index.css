@@ -1,11 +1,15 @@
 html {
+  background-image: url("./assets/background.svg");
+  background-attachment: fixed;
+  background-size: cover;
   margin: 0;
   padding: 0;
-  min-height: 100%;
-  background-color: var(--dark-purple-color);
-  background-image: url("./assets/background.svg");
-  background-size: cover;
-  background-position: center;
+}
+
+@media (pointer: coarse) {
+  html, body {
+    overscroll-behavior: none;
+  }
 }
 
 :root {
@@ -242,12 +246,17 @@ a:hover {
 
 body {
   margin: 0;
-  min-width: 100vw;
-  min-height: 100vh;
-  background: transparent;
   display: flex;
   place-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
   align-items: flex-start; /* Put items at top */
+
+  /* background control inspired by https://www.w3schools.com/cssref/pr_background-attachment.php*/
+  background-image: url("./assets/background.svg");
+  background-position-x: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 h1 {
@@ -277,7 +286,7 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #242424;
+    background-color: #ffffff;
   }
   a:hover {
     color: #747bff;
