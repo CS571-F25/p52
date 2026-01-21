@@ -4,12 +4,7 @@ html {
   background-size: cover;
   margin: 0;
   padding: 0;
-}
-
-@media (pointer: coarse) {
-  html, body {
-    overscroll-behavior: none;
-  }
+  overscroll-behavior: none;
 }
 
 :root {
