@@ -6,12 +6,6 @@ html {
   padding: 0;
 }
 
-@media (pointer: coarse) {
-  html, body {
-    overscroll-behavior: none;
-  }
-}
-
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
