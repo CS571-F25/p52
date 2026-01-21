@@ -4,7 +4,7 @@ html {
   background-size: cover;
   margin: 0;
   padding: 0;
-  overscroll-behavior: contain;
+  overscroll-behavior: none;
 }
 
 :root {
