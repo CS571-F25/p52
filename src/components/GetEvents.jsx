@@ -132,41 +132,47 @@ export default function GetEvents(props) {
 
     return <div>
         <h1 className="pageTitle">{props.isUpcoming ? "Upcoming Events" : "Past Events"}</h1>
-        <br/>
-        <div>
-            <Pagination style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}> {/* Make pagination responsive to smaller screens */}
-                {
-                    categoryList.map((c) =>{
-                        return <Pagination.Item
-                            key = {c}
-                            active = {type === c}
-                            onClick = {() => setType(c)}
-                        >{c}
-                        </Pagination.Item>
-                    })
-                }
-            </Pagination>
-        </div>
-        <br/>
         {
-            props.isUpcoming &&
-            <Container>
-                <Row style={{width: "100vw", maxWidth: "100%"}}> {/* Keep content positions consistent */}
-                    {
-                        displayEvents(keptEvents, props.isUpcoming, categoryColors)
-                    }
-                </Row>
-            </Container>
-        }
-        {
-            !props.isUpcoming &&
-            <>
-                <Container>
+            keptEvents.length > 0 ?
+            <div>
+                <br/>
+                <div>
+                    <Pagination style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}> {/* Make pagination responsive to smaller screens */}
+                        {
+                            categoryList.map((c) =>{
+                                return <Pagination.Item
+                                    key = {c}
+                                    active = {type === c}
+                                    onClick = {() => setType(c)}
+                                >{c}
+                                </Pagination.Item>
+                            })
+                        }
+                    </Pagination>
+                </div>
+                <br/>
                 {
-                        displayEvents(keptEvents, props.isUpcoming, categoryColors)
+                    props.isUpcoming &&
+                    <Container>
+                        <Row style={{width: "100vw", maxWidth: "100%"}}> {/* Keep content positions consistent */}
+                            {
+                                displayEvents(keptEvents, props.isUpcoming, categoryColors)
+                            }
+                        </Row>
+                    </Container>
                 }
-                </Container>
-            </>
+                {
+                    !props.isUpcoming &&
+                    <>
+                        <Container>
+                        {
+                                displayEvents(keptEvents, props.isUpcoming, categoryColors)
+                        }
+                        </Container>
+                    </>
+                }
+            </div>
+            : <h2 style={{color: "white"}}>{`There are no ${props.isUpcoming ? "upcoming" : "past"} events.`}</h2>
         }
     </div>
 }

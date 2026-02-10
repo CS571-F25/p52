@@ -1,33 +1,36 @@
 {
     "events": [
-        {"name": "\"Golden\" Dance Lesson - Rumi",
+        {
+            "name": "\"Golden\" Dance Lesson - Rumi",
             "description": "Learn Rumi's choreography for the song \"Golden\".",
-            "date": "Jan 21, 2026",
-            "startTime": "9:00 AM",
-            "endTime": "2:00 PM",
+            "date": "TBD",
+            "startTime": "TBD",
+            "endTime": "TBD",
             "location": "TBD",
             "categories": ["Dance"]
         },
-        {"name": "\"Golden\" Dance Lesson - Zoey",
+        {
+            "name": "\"Golden\" Dance Lesson - Zoey",
             "description": "Learn Zoey's choreography for the song \"Golden\".",
-            "date": "Dec 25, 2026",
-            "startTime": "2:00 PM",
-            "endTime": "3:00 PM",
+            "date": "TBD",
+            "startTime": "TBD",
+            "endTime": "TBD",
             "location": "TBD",
             "categories": ["Dance"]
         },
-        {"name": "\"Golden\" Dance Lesson - Mira",
+        {
+            "name": "\"Golden\" Dance Lesson - Mira",
             "description": "Learn Mira's choreography for the song \"Golden\".",
-            "date": "Dec 25, 2026",
-            "startTime": "3:00 PM",
-            "endTime": "4:00 PM",
+            "date": "TBD",
+            "startTime": "TBD",
+            "endTime": "TBD",
             "location": "TBD",
             "categories": ["Dance"]
         },
         {
             "name": "\"Soda Pop\" Dance Lesson",
             "description": "Learn choreography for the song \"Soda Pop\".",
-            "date": "Dec 25, 2026",
+            "date": "TBD",
             "startTime": "TBD",
             "endTime": "TBD",
             "location": "TBD",
@@ -36,7 +39,7 @@
         {
             "name": "\"Your Idol\" Dance Lesson",
             "description": "Learn choreography for the song \"Your Idol\".",
-            "date": "Dec 24, 2026",
+            "date": "TBD",
             "startTime": "TBD",
             "endTime": "TBD",
             "location": "TBD",
@@ -45,19 +48,19 @@
         {
             "name": "Flash Mob Event",
             "description": "Perform \"Golden\" in public.",
-            "date": "Fri, June 20, 2025",
-            "startTime": "1:00 PM",
-            "endTime": "2:00 PM",
-            "location": "Library Mall",
+            "date": "TBD",
+            "startTime": "TBD",
+            "endTime": "TBD",
+            "location": "TBD",
             "categories": ["Dance"],
             "slideshow": "https://docs.google.com/presentation/d/e/2PACX-1vRojMa3tAd0iFVMw8a14OZIBgoIyrxW_i8mEL1SWnIgoxhtSg2iXijtGaJIbEyza9qJhqyRJVE0A9kS/pubembed?start=false&loop=true&delayms=3000"
         },
         {
             "name": "Karaoke",
             "description": "Sing songs from <em>KPop Demon Hunters</em>.",
-            "date": "Dec 24, 2026",
-            "startTime": "1:00 AM",
-            "endTime": "2:00 AM",
+            "date": "TBD",
+            "startTime": "TBD",
+            "endTime": "TBD",
             "location": "TBD",
             "categories": ["Singing"]
         },
@@ -73,9 +76,9 @@
         {
             "name": "Maedeup Bracelet Craft",
             "description": "Re-create the bracelet Rumi gave to Jinu.",
-            "date": "Sat, Aug 23, 2025",
-            "startTime": "12:00 PM",
-            "endTime": "1:00 PM",
+            "date": "TBD",
+            "startTime": "TBD",
+            "endTime": "TBD",
             "location": "TBD",
             "categories": ["DIY"],
             "slideshow": "https://docs.google.com/presentation/d/e/2PACX-1vQuAUYLkiDJuGIZ-C-edO-zKYn2ihMlZdC97AA8pwf61QogQkGsi86ViNMrywIiFEwjfsX8FrJzzXY0/pubembed?start=false&loop=false&delayms=3000"
@@ -83,9 +86,9 @@
         {
             "name": "Norigae Craft",
             "description": "Create your own personal norigae inspired by the one that Zoey wears in <em>How It's Done</em>.",
-            "date": "Sat, Aug 23, 2025",
-            "startTime": "2:00 PM",
-            "endTime": "3:00 PM",
+            "date": "TBD",
+            "startTime": "TBD",
+            "endTime": "TBD",
             "location": "TBD",
             "categories": ["DIY"]
         },
@@ -173,9 +176,9 @@
         {
             "name": "Light Stick Craft",
             "description": "Show off your favorite band by creating their light sticks!",
-            "date": "Sat, Aug 23, 2025",
-            "startTime": "1:00 AM",
-            "endTime": "2:00 AM",
+            "date": "TBD",
+            "startTime": "TBD",
+            "endTime": "TBD",
             "location": "TBD",
             "categories": ["DIY"],
             "slideshow": "https://docs.google.com/presentation/d/e/2PACX-1vRVH43UmAohYOrm0AvgbVsVoGihdEV4N-_dfoxAic0tm1tqybAC7W6CboWFedcP2Ik-2taZnViFpkh1/pubembed?start=false&loop=true&delayms=3000"

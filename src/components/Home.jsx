@@ -66,7 +66,7 @@ export default function Home (props) {
                             title="Availability Form"
                             lines={["What meeting times work best for you?"]}
                             Qr={availabilityQR} QRalt="QR Code for Availability Form" imgWidth="20%"
-                            link="https://www.when2meet.com/?32132278-2l8BM"
+                            link="https://tinyurl.com/s25kdh"
                         />
                         <br/>
                         <QRCode
