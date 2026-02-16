@@ -238,21 +238,12 @@
             "categories": ["Watch Party", "Film Creation"]
         },
         {
-            "name": "Movie Night - Group 1",
-            "description": "Join us for a viewing of the movie <em>KPop Demon Hunters</em>. Commentary is allowed.",
-            "date": "TBD",
-            "startTime": "TBD",
-            "endTime": "TBD",
-            "location": "TBD",
-            "categories": ["Watch Party"]
-        },
-                {
-            "name": "Movie Night - Group 2",
-            "description": "Join us for a silent viewing of the movie <em>KPop Demon Hunters</em>.",
-            "date": "TBD",
-            "startTime": "TBD",
-            "endTime": "TBD",
-            "location": "TBD",
+            "name": "Movie Night",
+            "description": "Join us for a viewing of the movie <em>KPop Demon Hunters</em>.",
+            "date": "Feb 19, 2026",
+            "startTime": "4:30 PM",
+            "endTime": "6:30 PM",
+            "location": "Sterling 1313",
             "categories": ["Watch Party"]
         },
         {
