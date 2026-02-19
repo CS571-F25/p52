@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {Card, Container, Row, Col} from "react-bootstrap";
-import splitEmTags from "../helper-functions/splitEmTags.jsx";
+import splitTags from "../helper-functions/splitTags.jsx";
 import discordQR from "../assets/QR Codes/discordQR.png";
 import formQR from "../assets/QR Codes/formQR.png";
 import mailingQR from "../assets/QR Codes/mailingQR.png";
@@ -92,8 +92,8 @@ export default function Home (props) {
                 <br/>
 
                 {/* This styling will allow \n to be recognized. Inspired by: https://stackoverflow.com/questions/42547885/how-to-recognize-new-line-character-n-in-html*/}
-                {/* There may be italics within the content. We use splitEmTags() to handle <em> tags in the content */}
-                <p style={{whiteSpace: "pre-wrap", textAlign: "left"}}>{splitEmTags(dailyLesson.content)}</p>
+                {/* There may be italics within the content. We use splitTags() to handle <em> tags in the content */}
+                <p style={{whiteSpace: "pre-wrap", textAlign: "left"}}>{splitTags(dailyLesson.content)}</p>
 
                 <br/>
                 <button className="purple-button" onClick={()=>{setShowSources(s=>!s)}}>{showSources ? "Hide " : "Show "}Sources</button>

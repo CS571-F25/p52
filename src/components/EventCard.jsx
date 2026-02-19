@@ -1,6 +1,6 @@
 import { Card } from "react-bootstrap";
 import { useRef, useEffect, useState } from "react";
-import splitEmTags from "../helper-functions/splitEmTags.jsx";
+import splitBrEmTags from "../helper-functions/splitTags.jsx";
 
 export default function EventCard(props) {
     const contentRef = useRef(null);
@@ -14,8 +14,8 @@ export default function EventCard(props) {
         }
     }, []);
 
-    const renderName = splitEmTags(props.name);
-    const renderDescription = splitEmTags(props.description);
+    const renderName = splitBrEmTags(props.name);
+    const renderDescription = splitBrEmTags(props.description);
 
     return <Card className={props.type === "ongoing" ? "card card-glow-blue" : "card"} style={{ width: "100%", height: "100%" }}>
         {props.isUpcoming && (
