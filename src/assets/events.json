@@ -1,6 +1,16 @@
 {
     "events": [
         {
+            "name": "Trivia Night",
+            "description": "Want to put your <em>KPop Demon Hunters</em> knowledge to the test? Join us for a fun, social event! Brush up on Korean culture to get the extra-hard questions!",
+            "date": "Mar 19, 2026",
+            "startTime": "5:00 PM",
+            "endTime": "6:30 PM",
+            "location": "TBD",
+            "categories": ["Culture", "Social"],
+            "slideshow": "https://docs.google.com/presentation/d/e/2PACX-1vTD8OMJzvngxvb7xW242nKqF8tFA3seeD3BeZpE0i9xfSLK9UzksqOqA7jjMy3_ym-Pr1ee_enOKbeZ/pubembed?start=false&loop=false&delayms=3000"
+        },
+        {
             "name": "\"Golden\" Dance Lesson - Rumi",
             "description": "Learn Rumi's choreography for the song \"Golden\".",
             "date": "TBD",
@@ -62,7 +72,7 @@
             "startTime": "TBD",
             "endTime": "TBD",
             "location": "TBD",
-            "categories": ["Singing"]
+            "categories": ["Singing", "Social"]
         },
         {
             "name": "Korean Lyrics",
@@ -99,7 +109,7 @@
             "startTime": "TBD",
             "endTime": "TBD",
             "location": "TBD",
-            "categories": ["DIY"]
+            "categories": ["DIY", "Social"]
         },
         {
             "name": "Demon Patterns",
@@ -108,7 +118,7 @@
             "startTime": "TBD",
             "endTime": "TBD",
             "location": "TBD",
-            "categories": ["DIY"]
+            "categories": ["DIY", "Social"]
         },
         {
             "name": "Derpy and Sussie Painting",
@@ -135,7 +145,7 @@
             "startTime": "TBD",
             "endTime": "TBD",
             "location": "TBD",
-            "categories": ["DIY"]
+            "categories": ["DIY", "Social"]
         },
         {
             "name": "Keychain Creations",
@@ -144,7 +154,7 @@
             "startTime": "TBD",
             "endTime": "TBD",
             "location": "TBD",
-            "categories": ["DIY"]
+            "categories": ["DIY", "Social"]
         },
         {
             "name": "Card Creations",
@@ -153,7 +163,7 @@
             "startTime": "TBD",
             "endTime": "TBD",
             "location": "TBD",
-            "categories": ["DIY"]
+            "categories": ["DIY", "Social"]
         },
         {
             "name": "Sewing Creations",
@@ -162,7 +172,7 @@
             "startTime": "TBD",
             "endTime": "TBD",
             "location": "TBD",
-            "categories": ["DIY"]
+            "categories": ["DIY", "Social"]
         },
         {
             "name": "Ramyeon Cups",
@@ -171,7 +181,7 @@
             "startTime": "TBD",
             "endTime": "TBD",
             "location": "TBD",
-            "categories": ["DIY"]
+            "categories": ["DIY", "Social"]
         },
         {
             "name": "Light Stick Craft",
@@ -208,7 +218,7 @@
             "startTime": "TBD",
             "endTime": "TBD",
             "location": "TBD",
-            "categories": ["Food"]
+            "categories": ["Food", "Social"]
         },
         {
             "name": "Korean Culture",
@@ -253,7 +263,7 @@
             "startTime": "4:30 PM",
             "endTime": "6:30 PM",
             "location": "Sterling 1313",
-            "categories": ["Watch Party"]
+            "categories": ["Watch Party", "Social"]
         },
         {
             "name": "KPDH Short",
@@ -262,7 +272,7 @@
             "startTime": "TBD",
             "endTime": "TBD",
             "location": "TBD",
-            "categories": ["Watch Party"]
+            "categories": ["Watch Party", "Social"]
         }
     ]
 }
