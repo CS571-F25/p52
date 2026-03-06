@@ -132,7 +132,7 @@ export default function GetEvents(props) {
     return <div>
         <h1 className="pageTitle">{props.isUpcoming ? "Upcoming Events" : "Past Events"}</h1>
         {
-            keptEvents.length > 0 ?
+            eventList.length > 0 ?
             <div>
                 <br/>
                 <div>
