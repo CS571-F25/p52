@@ -1,33 +1,46 @@
 {
     "events": [
-        {"name": "\"Golden\" Dance Lesson - Rumi",
+        {
+            "name": "Trivia Night",
+            "description": "Want to put your <em>KPop Demon Hunters</em> knowledge to the test? Join us for a fun, social event! Brush up on Korean culture to get the extra-hard questions!",
+            "date": "Mar 19, 2026",
+            "startTime": "5:00 PM",
+            "endTime": "6:30 PM",
+            "location": "1101 Humanities",
+            "categories": ["Culture", "Social"],
+            "slideshow": "https://docs.google.com/presentation/d/e/2PACX-1vTD8OMJzvngxvb7xW242nKqF8tFA3seeD3BeZpE0i9xfSLK9UzksqOqA7jjMy3_ym-Pr1ee_enOKbeZ/pubembed?start=false&loop=false&delayms=3000"
+        },
+        {
+            "name": "\"Golden\" Dance Lesson - Rumi",
             "description": "Learn Rumi's choreography for the song \"Golden\".",
-            "date": "Jan 21, 2026",
-            "startTime": "9:00 AM",
-            "endTime": "2:00 PM",
+            "date": "TBD",
+            "startTime": "TBD",
+            "endTime": "TBD",
             "location": "TBD",
             "categories": ["Dance"]
         },
-        {"name": "\"Golden\" Dance Lesson - Zoey",
+        {
+            "name": "\"Golden\" Dance Lesson - Zoey",
             "description": "Learn Zoey's choreography for the song \"Golden\".",
-            "date": "Dec 25, 2026",
-            "startTime": "2:00 PM",
-            "endTime": "3:00 PM",
+            "date": "TBD",
+            "startTime": "TBD",
+            "endTime": "TBD",
             "location": "TBD",
             "categories": ["Dance"]
         },
-        {"name": "\"Golden\" Dance Lesson - Mira",
+        {
+            "name": "\"Golden\" Dance Lesson - Mira",
             "description": "Learn Mira's choreography for the song \"Golden\".",
-            "date": "Dec 25, 2026",
-            "startTime": "3:00 PM",
-            "endTime": "4:00 PM",
+            "date": "TBD",
+            "startTime": "TBD",
+            "endTime": "TBD",
             "location": "TBD",
             "categories": ["Dance"]
         },
         {
             "name": "\"Soda Pop\" Dance Lesson",
             "description": "Learn choreography for the song \"Soda Pop\".",
-            "date": "Dec 25, 2026",
+            "date": "TBD",
             "startTime": "TBD",
             "endTime": "TBD",
             "location": "TBD",
@@ -36,7 +49,7 @@
         {
             "name": "\"Your Idol\" Dance Lesson",
             "description": "Learn choreography for the song \"Your Idol\".",
-            "date": "Dec 24, 2026",
+            "date": "TBD",
             "startTime": "TBD",
             "endTime": "TBD",
             "location": "TBD",
@@ -45,21 +58,21 @@
         {
             "name": "Flash Mob Event",
             "description": "Perform \"Golden\" in public.",
-            "date": "Fri, June 20, 2025",
-            "startTime": "1:00 PM",
-            "endTime": "2:00 PM",
-            "location": "Library Mall",
+            "date": "TBD",
+            "startTime": "TBD",
+            "endTime": "TBD",
+            "location": "TBD",
             "categories": ["Dance"],
             "slideshow": "https://docs.google.com/presentation/d/e/2PACX-1vRojMa3tAd0iFVMw8a14OZIBgoIyrxW_i8mEL1SWnIgoxhtSg2iXijtGaJIbEyza9qJhqyRJVE0A9kS/pubembed?start=false&loop=true&delayms=3000"
         },
         {
             "name": "Karaoke",
             "description": "Sing songs from <em>KPop Demon Hunters</em>.",
-            "date": "Dec 24, 2026",
-            "startTime": "1:00 AM",
-            "endTime": "2:00 AM",
+            "date": "TBD",
+            "startTime": "TBD",
+            "endTime": "TBD",
             "location": "TBD",
-            "categories": ["Singing"]
+            "categories": ["Singing", "Social"]
         },
         {
             "name": "Korean Lyrics",
@@ -73,9 +86,9 @@
         {
             "name": "Maedeup Bracelet Craft",
             "description": "Re-create the bracelet Rumi gave to Jinu.",
-            "date": "Sat, Aug 23, 2025",
-            "startTime": "12:00 PM",
-            "endTime": "1:00 PM",
+            "date": "TBD",
+            "startTime": "TBD",
+            "endTime": "TBD",
             "location": "TBD",
             "categories": ["DIY"],
             "slideshow": "https://docs.google.com/presentation/d/e/2PACX-1vQuAUYLkiDJuGIZ-C-edO-zKYn2ihMlZdC97AA8pwf61QogQkGsi86ViNMrywIiFEwjfsX8FrJzzXY0/pubembed?start=false&loop=false&delayms=3000"
@@ -83,9 +96,9 @@
         {
             "name": "Norigae Craft",
             "description": "Create your own personal norigae inspired by the one that Zoey wears in <em>How It's Done</em>.",
-            "date": "Sat, Aug 23, 2025",
-            "startTime": "2:00 PM",
-            "endTime": "3:00 PM",
+            "date": "TBD",
+            "startTime": "TBD",
+            "endTime": "TBD",
             "location": "TBD",
             "categories": ["DIY"]
         },
@@ -96,7 +109,7 @@
             "startTime": "TBD",
             "endTime": "TBD",
             "location": "TBD",
-            "categories": ["DIY"]
+            "categories": ["DIY", "Social"]
         },
         {
             "name": "Demon Patterns",
@@ -105,7 +118,7 @@
             "startTime": "TBD",
             "endTime": "TBD",
             "location": "TBD",
-            "categories": ["DIY"]
+            "categories": ["DIY", "Social"]
         },
         {
             "name": "Derpy and Sussie Painting",
@@ -132,7 +145,7 @@
             "startTime": "TBD",
             "endTime": "TBD",
             "location": "TBD",
-            "categories": ["DIY"]
+            "categories": ["DIY", "Social"]
         },
         {
             "name": "Keychain Creations",
@@ -141,7 +154,7 @@
             "startTime": "TBD",
             "endTime": "TBD",
             "location": "TBD",
-            "categories": ["DIY"]
+            "categories": ["DIY", "Social"]
         },
         {
             "name": "Card Creations",
@@ -150,7 +163,7 @@
             "startTime": "TBD",
             "endTime": "TBD",
             "location": "TBD",
-            "categories": ["DIY"]
+            "categories": ["DIY", "Social"]
         },
         {
             "name": "Sewing Creations",
@@ -159,7 +172,7 @@
             "startTime": "TBD",
             "endTime": "TBD",
             "location": "TBD",
-            "categories": ["DIY"]
+            "categories": ["DIY", "Social"]
         },
         {
             "name": "Ramyeon Cups",
@@ -168,14 +181,14 @@
             "startTime": "TBD",
             "endTime": "TBD",
             "location": "TBD",
-            "categories": ["DIY"]
+            "categories": ["DIY", "Social"]
         },
         {
             "name": "Light Stick Craft",
             "description": "Show off your favorite band by creating their light sticks!",
-            "date": "Sat, Aug 23, 2025",
-            "startTime": "1:00 AM",
-            "endTime": "2:00 AM",
+            "date": "TBD",
+            "startTime": "TBD",
+            "endTime": "TBD",
             "location": "TBD",
             "categories": ["DIY"],
             "slideshow": "https://docs.google.com/presentation/d/e/2PACX-1vRVH43UmAohYOrm0AvgbVsVoGihdEV4N-_dfoxAic0tm1tqybAC7W6CboWFedcP2Ik-2taZnViFpkh1/pubembed?start=false&loop=true&delayms=3000"
@@ -205,7 +218,7 @@
             "startTime": "TBD",
             "endTime": "TBD",
             "location": "TBD",
-            "categories": ["Food"]
+            "categories": ["Food", "Social"]
         },
         {
             "name": "Korean Culture",
@@ -215,6 +228,15 @@
             "endTime": "TBD",
             "location": "TBD",
             "categories": ["Culture","Speakers"]
+        },
+        {
+            "name": "Korean Shamanism and Myth in KPDH",
+            "description": "Join us to watch <a href='https://ckr.weai.columbia.edu/events/do-not-try-bend-spoon-there-no-spoon-korean-shamanism-and-myth-k-pop-demon-hunters'>Bo-young Kim's lecture</a>.",
+            "date": "Mar 27, 2026",
+            "startTime": "2:00 PM",
+            "endTime": "4:00 PM",
+            "location": "2534 Engineering Hall",
+            "categories": ["Culture","Speakers", "Watch Party"]
         },
         {
             "name": "KPDH Speakers",
@@ -235,22 +257,13 @@
             "categories": ["Watch Party", "Film Creation"]
         },
         {
-            "name": "Movie Night - Group 1",
-            "description": "Join us for a viewing of the movie <em>KPop Demon Hunters</em>. Commentary is allowed.",
-            "date": "TBD",
-            "startTime": "TBD",
-            "endTime": "TBD",
-            "location": "TBD",
-            "categories": ["Watch Party"]
-        },
-                {
-            "name": "Movie Night - Group 2",
-            "description": "Join us for a silent viewing of the movie <em>KPop Demon Hunters</em>.",
-            "date": "TBD",
-            "startTime": "TBD",
-            "endTime": "TBD",
-            "location": "TBD",
-            "categories": ["Watch Party"]
+            "name": "Movie Night",
+            "description": "Join us for a viewing of the movie <em>KPop Demon Hunters</em>.",
+            "date": "Feb 19, 2026",
+            "startTime": "4:30 PM",
+            "endTime": "6:30 PM",
+            "location": "Sterling 1313",
+            "categories": ["Watch Party", "Social"]
         },
         {
             "name": "KPDH Short",
@@ -259,7 +272,7 @@
             "startTime": "TBD",
             "endTime": "TBD",
             "location": "TBD",
-            "categories": ["Watch Party"]
+            "categories": ["Watch Party", "Social"]
         }
     ]
 }

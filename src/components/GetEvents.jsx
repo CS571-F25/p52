@@ -96,19 +96,18 @@ export default function GetEvents(props) {
     });
 
     // get all possible event categories
-    const uniqueCategories = new Set(); // set means no duplicate categories
+    const categoryList = ["All"];
+    const addedCategories = new Set(["All"]); // set means no duplicate categories
 
-    uniqueCategories.add("All");
-
-    // iterate through each event and add categories to the Set (want categories of both past and upcoming events)
+    // iterate through each event and add categories to the list (want categories of both past and upcoming events)
     events.events.forEach(event => {
         event.categories.forEach(category => {
-            uniqueCategories.add(category);
+            if (!addedCategories.has(category)) {
+                categoryList.push(category);
+                addedCategories.add(category);
+            }
         });
     });
-
-    // Convert the Set to an array so can use map
-    const categoryList = Array.from(uniqueCategories);
 
     // Create a map of colors for categories
     const categoryColors = new Map();
@@ -132,41 +131,47 @@ export default function GetEvents(props) {
 
     return <div>
         <h1 className="pageTitle">{props.isUpcoming ? "Upcoming Events" : "Past Events"}</h1>
-        <br/>
-        <div>
-            <Pagination style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}> {/* Make pagination responsive to smaller screens */}
-                {
-                    categoryList.map((c) =>{
-                        return <Pagination.Item
-                            key = {c}
-                            active = {type === c}
-                            onClick = {() => setType(c)}
-                        >{c}
-                        </Pagination.Item>
-                    })
-                }
-            </Pagination>
-        </div>
-        <br/>
         {
-            props.isUpcoming &&
-            <Container>
-                <Row style={{width: "100vw", maxWidth: "100%"}}> {/* Keep content positions consistent */}
-                    {
-                        displayEvents(keptEvents, props.isUpcoming, categoryColors)
-                    }
-                </Row>
-            </Container>
-        }
-        {
-            !props.isUpcoming &&
-            <>
-                <Container>
+            keptEvents.length > 0 ?
+            <div>
+                <br/>
+                <div>
+                    <Pagination style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}> {/* Make pagination responsive to smaller screens */}
+                        {
+                            categoryList.map((c) =>{
+                                return <Pagination.Item
+                                    key = {c}
+                                    active = {type === c}
+                                    onClick = {() => setType(c)}
+                                >{c}
+                                </Pagination.Item>
+                            })
+                        }
+                    </Pagination>
+                </div>
+                <br/>
                 {
-                        displayEvents(keptEvents, props.isUpcoming, categoryColors)
+                    props.isUpcoming &&
+                    <Container>
+                        <Row style={{width: "100vw", maxWidth: "100%"}}> {/* Keep content positions consistent */}
+                            {
+                                displayEvents(keptEvents, props.isUpcoming, categoryColors)
+                            }
+                        </Row>
+                    </Container>
                 }
-                </Container>
-            </>
+                {
+                    !props.isUpcoming &&
+                    <>
+                        <Container>
+                        {
+                                displayEvents(keptEvents, props.isUpcoming, categoryColors)
+                        }
+                        </Container>
+                    </>
+                }
+            </div>
+            : <h2 style={{color: "white"}}>{`There are no ${props.isUpcoming ? "upcoming" : "past"} events.`}</h2>
         }
     </div>
 }
@@ -192,11 +197,15 @@ function displayEvents(keptEvents, isUpcoming, categoryColors) {
 const predefinedColors = [
     "#9b0015ff", "#00ae20ff", "#006effff", "#FF33A1", "#A133FF", "#33FFF5", "#191587ff", "#ff92efff", "#59ff99ff"
 ];
+const categoryColorMap = new Map(); // Cache to store consistent colors for each category
 let colorIndex = 0; // Global index to track the next color to use
 
 // Function to generate a unique color for each category
 function generateColor(category) {
-    const color = predefinedColors[colorIndex % predefinedColors.length]; // Use colors in a round-robin fashion
-    colorIndex++; // Increment the index for the next category
-    return color;
+    if (!categoryColorMap.has(category)) {
+        const color = predefinedColors[colorIndex % predefinedColors.length]; // Use colors in a round-robin fashion
+        categoryColorMap.set(category, color);
+        colorIndex++; // Increment the index for the next category
+    }
+    return categoryColorMap.get(category);
 }
