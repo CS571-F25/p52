@@ -31,7 +31,10 @@ export default function Source(props) {
     }
 
     // date (may not be provided!)
-    const date = props.date ?? "";
+    let date = props.date ?? "";
+    if (date) {
+        date = date + ",";
+    }
 
     // link
     const link = props.link;
@@ -44,7 +47,7 @@ export default function Source(props) {
 
     
     return <div>
-        <p>{author} {title} {editor} <em>{website}</em> {publisher} <a href={link}>{link}</a>. {accessed}</p>
+        <p>{author} {title} {editor} <em>{website}</em> {publisher} {date} <a href={link}>{link}</a>. {accessed}</p>
     </div>
 }
 
