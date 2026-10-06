@@ -155,7 +155,7 @@ export default function GetEvents(props) {
                     <Container>
                         <Row style={{width: "100vw", maxWidth: "100%"}}> {/* Keep content positions consistent */}
                             {
-                                displayEvents(keptEvents, props.isUpcoming, categoryColors)
+                                displayEvents(keptEvents, props.isUpcoming, categoryColors, type)
                             }
                         </Row>
                     </Container>
@@ -165,7 +165,7 @@ export default function GetEvents(props) {
                     <>
                         <Container>
                         {
-                                displayEvents(keptEvents, props.isUpcoming, categoryColors)
+                                displayEvents(keptEvents, props.isUpcoming, categoryColors, type)
                         }
                         </Container>
                     </>
@@ -177,19 +177,23 @@ export default function GetEvents(props) {
 }
 
 // function to display event cards
-function displayEvents(keptEvents, isUpcoming, categoryColors) {
-    if(isUpcoming)
-    {
-        return keptEvents.map((e) => {
-            return <Col key={e.name} xs={12} sm={12} md={6} lg={4} xl={3} style={{ marginBottom: "16px" }}>
-                <EventCard {...e} isUpcoming = {isUpcoming} categoryColors={categoryColors} ></EventCard>
-            </Col>
-        });
+function displayEvents(keptEvents, isUpcoming, categoryColors, type) {
+    if (keptEvents.length <= 0) {
+        return <p style={{color: "white"}}>There are no {isUpcoming ? "upcoming" : "past"} <em>{type}</em> events.</p>;
     }
     else {
-        return keptEvents.map((e) => {
-            return <EventCard key={e.name} isUpcoming = {isUpcoming} xs={12} sm={12} md={6} lg={4} xl={3} {...e} categoryColors={categoryColors}></EventCard>
-        });
+        if(isUpcoming) {
+            return keptEvents.map((e) => {
+                return <Col key={e.name} xs={12} sm={12} md={6} lg={4} xl={3} style={{ marginBottom: "16px" }}>
+                    <EventCard {...e} isUpcoming = {isUpcoming} categoryColors={categoryColors} ></EventCard>
+                </Col>
+            });
+        }
+        else {
+            return keptEvents.map((e) => {
+                return <EventCard key={e.name} isUpcoming = {isUpcoming} xs={12} sm={12} md={6} lg={4} xl={3} {...e} categoryColors={categoryColors}></EventCard>
+            });
+        }
     }
 }
 

@@ -6,7 +6,7 @@
             "date": "Mar 19, 2026",
             "startTime": "5:00 PM",
             "endTime": "6:30 PM",
-            "location": "1101 Humanities",
+            "location": "Humanities 1101",
             "categories": ["Culture", "Social"],
             "slideshow": "https://docs.google.com/presentation/d/e/2PACX-1vTD8OMJzvngxvb7xW242nKqF8tFA3seeD3BeZpE0i9xfSLK9UzksqOqA7jjMy3_ym-Pr1ee_enOKbeZ/pubembed?start=false&loop=false&delayms=3000"
         },
@@ -19,6 +19,43 @@
             "location": "Morgridge Hall B2556",
             "categories": ["Social"],
             "slideshow": "https://docs.google.com/presentation/d/e/2PACX-1vQCUKL4mgNyYdNE3eYjpltID2H9307zMIkz6kc-WgsRE1DUov-ogYkS3EeuMxVc9KNhCC54aKninFqT/pubembed?start=false&loop=false&delayms=3000"
+        },
+        {
+            "name": "Learning Hangul: Korean Language Workshop I",
+            "description": "Let's celebrate Hangul Day by learning Hangul (the Korean alphabet) and how it came to be! Please <a href='https://docs.google.com/forms/d/e/1FAIpQLScyG93XLtxEO6T0EDxs86oUUUcaQ_lDkMxD4AWUnnEY508WRw/viewform?usp=sharing&ouid=101726295902249380301'>RSVP</a>.",
+            "date": "Oct 9, 2026",
+            "startTime": "5:30 PM",
+            "endTime": "6:30 PM",
+            "location": "Morgridge Hall B2556",
+            "categories": ["Culture"],
+            "slideshow": "https://docs.google.com/presentation/d/e/2PACX-1vRtX_ognpSJhdKzLLDaIU9cG-f58URfE83dB6fN67WFK93DqoQDVaiIav-wETs3VkpKX2qja5KqXyOd/pubembed?start=false&loop=false&delayms=3000"
+        },
+        {
+            "name": "The First Amerasians: Mixed Race Koreans from Camptowns to America",
+            "description": "An event for watching a lecture held by Columbia University's Center for Korean Research on Zoom. Participants can choose to watch the lecture with others at an in-person location or <a href='https://ckr.weai.columbia.edu/events/first-amerasians-mixed-race-koreans-camptowns-america'>join the Zoom themselves with the provided link</a>. The lecturer, Yuri W. Doolan, discusses \"how Americans created and used the concept of the Amerasian to remove thousands of mixed race children from their Korean mothers to adoptive US homes during the 1950s and 1960s.\"",
+            "date": "Oct 15, 2026",
+            "startTime": "3:00 PM",
+            "endTime": "4:30 PM",
+            "location": "Mechanical Engineering Building 1164",
+            "categories": ["History","Speakers", "Watch Party"]
+        },
+        {
+            "name": "Korean Books, Material Knowledge, and the Making of the Korean Literary Past",
+            "description": "An event for watching a lecture held by Columbia University's Center for Korean Research on Zoom. Participants can choose to watch the lecture with others at an in-person location or <a href='https://ckr.weai.columbia.edu/events/korean-books-material-knowledge-and-making-korean-literary-past'>join the Zoom themselves with the provided link</a>. The lecturer, Si Nae Park, discusses books from Korea that were exhibited at the 1889 and 1900 Paris World Expositions and how they informed Korean literature.",
+            "date": "Nov 16, 2026",
+            "startTime": "3:00 PM",
+            "endTime": "4:30 PM",
+            "location": "Engineering Hall 2534",
+            "categories": ["Culture","History","Speakers", "Watch Party"]
+        },
+        {
+            "name": "Courts in the Crossfire: Korean Law and Judicial Institutions in a Time of Political Polarization",
+            "description": "An event for watching a lecture held by Columbia University's Center for Korean Research on Zoom. Participants can choose to watch the lecture with others at an in-person location or <a href='https://ckr.weai.columbia.edu/events/courts-crossfire-korean-law-and-judicial-institutions-time-political-polarization'>join the Zoom themselves with the provided link</a>. The lecturer, Marie Seong-Hak Kim, discusses how the Cold War and division of Korea has affected modern Korean politics.",
+            "date": "Nov 17, 2026",
+            "startTime": "3:00 PM",
+            "endTime": "4:30 PM",
+            "location": "Engineering Hall 3024",
+            "categories": ["History","Speakers", "Watch Party"]
         },
         {
             "name": "\"Golden\" Dance Lesson - Rumi",
@@ -245,7 +282,7 @@
             "date": "Mar 27, 2026",
             "startTime": "2:00 PM",
             "endTime": "4:00 PM",
-            "location": "2534 Engineering Hall",
+            "location": "Engineering Hall 2534",
             "categories": ["Culture","Speakers", "Watch Party"]
         },
         {
